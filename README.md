@@ -1,9 +1,9 @@
-# Guide Baoshan — UTSEUS
+# Baoshan Handbook — UTSEUS
 
-Guide de survie pour les étudiants ingénieurs français en semestre d'échange à l'UTSEUS
-(Université de Technologie Sino-Européenne de Shanghai), Shanghai University, campus de Baoshan.
+Handbook for exchange students spending a semester at UTSEUS
+(Sino-European School of Technology), Shanghai University, Baoshan campus.
 
-**Lire le guide : https://aneysait.github.io/guide-baoshan/**
+**Read the handbook : https://aneysait.github.io/guide-baoshan/**
 
-Rédigé par Anicet Barrios, Head Student Coordinator UTSEUS.
-Fonds de carte © OpenStreetMap contributors (ODbL).
+Written by Anicet Barrios, Head Student Coordinator, UTSEUS.
+Base maps © OpenStreetMap contributors (ODbL).
