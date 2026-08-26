@@ -1,9 +1,9 @@
-# Guide Baoshan — Carte SIM & Compte en banque (UTSEUS)
+# Baoshan Guide — SIM Card & Bank Account (UTSEUS)
 
-Branche d'extraction contenant uniquement les pages et adresses indispensables pour les formalités prioritaires d'arrivée à Shanghai University (campus de Baoshan) :
-- **Carte SIM chinoise** : opérateurs recommandés, forfaits étudiants sans engagement, adresses à proximité du campus avec liens Gaode Maps.
-- **Ouverture de compte bancaire** : agences partenaires SHU, liste des documents obligatoires, astuces et alternatives (WeChat / Alipay).
+Extraction branch containing only the essential pages and addresses for priority arrival formalities at Shanghai University (Baoshan campus):
+- **Chinese SIM card**: recommended operators, student plans with no contract, addresses near the campus with Gaode Maps links.
+- **Opening a bank account**: SHU partner branches, list of mandatory documents, tips and alternatives (WeChat / Alipay).
 
 ---
-Rédigé par Anicet Barrios, Head Student Coordinator UTSEUS.
-Guide complet disponible sur la branche `main` ou sur [https://aneysait.github.io/guide-baoshan/](https://aneysait.github.io/guide-baoshan/).
+Written by Anicet Barrios, Head Student Coordinator UTSEUS.
+Full guide available on the `main` branch or at [https://aneysait.github.io/guide-baoshan/](https://aneysait.github.io/guide-baoshan/).
