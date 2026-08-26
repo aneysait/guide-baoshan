@@ -131,6 +131,12 @@
   .badge.verif{background:#8B8177;}
   .aller{display:inline-block;font-family:var(--etroit);font-weight:700;font-size:8pt;letter-spacing:.08em;text-transform:uppercase;color:var(--rouge);border:.35mm solid var(--rouge);padding:.3mm 2mm;border-radius:.8mm;margin-left:1.5mm;vertical-align:middle;text-decoration:none;}
   @media print{.aller{display:none;}}
+  .slot{background:var(--panneau);border:.35mm dashed var(--filet);border-radius:1mm;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    font-family:var(--etroit);font-size:8pt;letter-spacing:.12em;text-transform:uppercase;color:#A79E96;
+    min-height:26mm;padding:2mm;margin:2mm 0;}
+  .slot img{width:100%;height:100%;object-fit:cover;border-radius:.6mm;}
+  .slot.large{min-height:42mm;}
   .sommaire a{color:inherit;text-decoration:none;}
   .sommaire a:hover{color:var(--rouge);}
   .pied a{color:inherit;text-decoration:none;}
@@ -340,21 +346,25 @@
       <div class="nom">1 · Yixin <span class="cn">益新楼</span></div>
       <div class="meta">À l'ouest de la bibliothèque · 6h00–18h30, salon de thé jusqu'à 20h30</div>
       <div class="desc">Niveau 1&nbsp;: self classique (nouilles, dim sum, plats au choix). Niveau 2&nbsp;: spécialités — bibimbap en bol de pierre, teppanyaki, curry — et un salon de thé qui sert des pâtes. Niveau 3&nbsp;: le restaurant «&nbsp;de réception&nbsp;», plus chic mais ouvert à tous.</div>
+      <div class="slot " data-img="resto-yixin.jpg">photo · 益新楼<br><span style="font-size:7pt">resto-yixin.jpg</span></div>
     </div>
     <div class="lieu">
       <div class="nom">2 · Ermei <span class="cn">尔美楼</span></div>
       <div class="meta">Porte nord, près des terrains · jusqu'à 20h30 au niveau 3</div>
       <div class="desc">Le réflexe d'après-sport, avec terrasse et véranda. Niveau 1&nbsp;: plats grillés + bubble tea <span class="cn">柚见鲜茶</span>. Niveau 3&nbsp;: le restaurant <strong>occidental</strong> du campus — leurs pizzas ont leur petit fan-club.</div>
+      <div class="slot " data-img="resto-ermei.jpg">photo · 尔美楼<br><span style="font-size:7pt">resto-ermei.jpg</span></div>
     </div>
     <div class="lieu">
       <div class="nom">3 · Shanming <span class="cn">山明楼</span></div>
       <div class="meta">Face aux bâtiments O/I · KFC 7h00–21h00</div>
       <div class="desc">Le bon plan anti-foule. Niveau 1&nbsp;: resto «&nbsp;intelligent&nbsp;» payé au poids + comptoir <strong>KFC</strong>. Niveau 2&nbsp;: nouilles suzhoulaises 老盛昌, luosifen, desserts 七分甜. Niveau 3&nbsp;: saveurs du Nord-Ouest — <span class="cn">大盘鸡</span>, nouilles sautées — l'étage le plus halal-friendly.</div>
+      <div class="slot " data-img="resto-shanming.jpg">photo · 山明楼<br><span style="font-size:7pt">resto-shanming.jpg</span></div>
     </div>
     <div class="lieu">
       <div class="nom">4 · Shuixiu <span class="cn">水秀楼</span></div>
       <div class="meta">Zone des cours, face aux bâtiments EJ/FJ · 6h30–18h30</div>
       <div class="desc">Le déjeuner entre deux cours — grosse affluence à midi pile. Niveau 1&nbsp;: canard laqué-riz <span class="cn">烧腊饭</span>, nouilles tirées à la main, malatang. Niveau 2&nbsp;: self + raviolis, wontons, nouilles de riz.</div>
+      <div class="slot " data-img="resto-shuixiu.jpg">photo · 水秀楼<br><span style="font-size:7pt">resto-shuixiu.jpg</span></div>
     </div>
     <div class="lieu">
       <div class="nom">5 · Wuxin <span class="cn">吾馨楼</span></div>
@@ -383,7 +393,7 @@
   <div class="grille-2">
     <div class="panneau"><strong>Par Alipay — le plus simple</strong><br>Cherchez <span class="cn">支付宝校园卡</span> dans Alipay → ajoutez une carte → cherchez «&nbsp;Shanghai University&nbsp;» → entrez numéro d'étudiant + nom. Crédité en moins de 5&nbsp;minutes.</div>
     <div class="panneau"><strong>Par WeChat</strong><br>Suivez le compte officiel <span class="cn">上海大学信息门户</span> → <span class="cn">校内用户</span> (Campus users) → Smart Portal <span class="cn">智慧门户</span> → connexion → <span class="cn">账户充值</span> (recharge).</div>
-    <div class="panneau"><strong>Par SHU WeCom <span class="cn">企业微信</span></strong><br>Installez WeCom, domaine d'organisation <strong>shuedu</strong>, connexion avec vos identifiants → Workspace → Life Services → <span class="cn">校园卡一卡通</span> → recharge.</div>
+    <div class="panneau"><strong>Par SHU WeCom <span class="cn">企业微信</span></strong><br>Installez WeCom, domaine d'organisation <strong>shuedu</strong>, connexion avec vos identifiants → Workspace → Life Services → <span class="cn">校园卡一卡通</span> → recharge.<div class="slot " data-img="qr-wecom.png">photo · QR WeCom SHU<br><span style="font-size:7pt">qr-wecom.png</span></div></div>
     <div class="panneau"><strong>En liquide</strong><br>Aux points de recharge cash, généralement près des restos U — le plan Z si les applis boudent.</div>
   </div>
   <p>Le sésame partout&nbsp;: l'<strong>authentification unifiée <span class="cn">统一身份认证</span></strong> — l'identifiant et le mot de passe uniques remis avec votre carte étudiante. Ils ouvrent WeCom, le portail, la recharge… et le VPN ci-dessous.</p>
@@ -398,9 +408,111 @@
   <h2 class="bloc">Le VPN du campus</h2>
   <div class="panneau">Pour accéder aux systèmes SHU (bibliothèque, portail, notes) depuis l'extérieur du campus, l'université fournit un VPN qui s'ouvre avec vos identifiants <span class="cn">统一身份认证</span>. <strong>Le mode d'emploi détaillé sera partagé sur le groupe WeChat UTSEUS</strong> — cette section sera complétée dès que le document officiel circule.</div>
 
+  <h2 class="bloc">Trois choses à savoir</h2>
+  <ul class="liste">
+    <li><strong>Le métro est à la porte nord&nbsp;:</strong> la station Shanghai University <span class="cn">上海大学站</span> est littéralement à la sortie du campus. <strong>La sortie 2 est en travaux</strong> (chantier prolongé de trois mois)&nbsp;: passez par la <strong>sortie 3</strong>, de l'autre côté de la route.</li>
+    <li><strong>Carte campus perdue ou démagnétisée&nbsp;:</strong> bornes de réédition en libre-service sous le bâtiment&nbsp;D, au 6ᵉ étage du bâtiment&nbsp;A (près des ascenseurs) et dans le hall du guichet unique. Autre souci&nbsp;? Le bureau info au rez-de-chaussée du bâtiment&nbsp;D.</li>
+    <li><strong>La maison solidaire <span class="cn">公益爱心屋</span>&nbsp;:</strong> dans le passage souterrain entre les bâtiments&nbsp;B et&nbsp;C — on y emprunte des vêtements, on y achète de quoi dépanner, et on peut simplement s'y poser lire ou écouter de la musique.</li>
+  </ul>
+
   <div class="conseil"><b>À ne pas confondre&nbsp;:</b> ce VPN <em>entre</em> dans le réseau de SHU. Celui qui <em>sort</em> du Grand Firewall (Google, WhatsApp…) est une toute autre affaire — voir le guide AFEC, et installez-le avant de quitter la France.</div>
 
   <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">07</span></div>
+</section>
+
+<section class="page lisere" id="installations">
+  <div class="vertical">Campus</div>
+  <div class="sur-titre">Chapitre II · suite</div>
+  <h1 class="chapitre">Infirmerie, douches<br><span class="rouge">&amp; bibliothèques</span></h1>
+
+  <h2 class="bloc">L'infirmerie du campus <span class="cn">校医院</span></h2>
+  <div class="lieu">
+    <div class="nom">Centre de santé, porte nord <span class="cn">校医院</span><a class="aller" href="https://uri.amap.com/search?keyword=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%8C%BB%E9%99%A2&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">→ y aller</a></div>
+    <div class="meta">Porte nord <span class="cn">北门</span>, à côté de la faculté de médecine · juste avant la sortie métro</div>
+    <div class="desc">Votre premier réflexe en cas de pépin — et le passage <strong>obligatoire</strong> pour être remboursé (voir ci-dessous). Consultations&nbsp;: médecine générale et chirurgie, <strong>dentaire</strong>, médecine chinoise (cervicales, lombaires, kiné), ORL et ophtalmo, gynécologie, dermatologie. Sur place aussi&nbsp;: laboratoire d'analyses, échographie, ECG, radiologie, et un service prévention qui gère les visites médicales et l'assurance santé étudiante.</div>
+    <div class="desc"><strong>Horaires&nbsp;:</strong> publiés chaque <strong>lundi</strong> sur le compte WeChat <span class="cn">上海大学学生会</span> — les créneaux varient par spécialité.</div>
+  </div>
+  <div class="slot large" data-img="infirmerie.jpg">photo · l'infirmerie 校医院<br><span style="font-size:7pt">infirmerie.jpg</span></div>
+
+  <div class="panneau">
+    <strong>Se faire rembourser&nbsp;: la règle du <span class="cn">转诊单</span></strong>
+    <p style="margin-top:2mm">1. On consulte <strong>d'abord à l'infirmerie</strong>. 2. Si besoin, le médecin délivre un bon de transfert (<span class="cn">转诊单</span>). 3. On va avec ce bon dans un <strong>hôpital conventionné</strong>&nbsp;: Huashan Nord <span class="cn">华山医院北院</span>, Tongji <span class="cn">同济医院</span>, 10ᵉ hôpital du peuple <span class="cn">市第十人民医院</span>, 6ᵉ hôpital du peuple <span class="cn">市第六人民医院</span>.</p>
+    <p><strong>Remboursement&nbsp;:</strong> au-delà d'une franchise annuelle de 300&nbsp;RMB — 70&nbsp;% en établissement de niveau&nbsp;1, 60&nbsp;% niveau&nbsp;2, 50&nbsp;% niveau&nbsp;3. Le bon vaut <strong>une semaine maximum</strong> et il en faut un par consultation et par spécialité. Exceptions&nbsp;: urgences et vacances d'hiver/d'été.</p>
+  </div>
+
+  <h2 class="bloc">Les douches <span class="cn">上大浴室</span></h2>
+  <div class="grille-2">
+    <div>
+      <div class="lieu">
+        <div class="nom">Bains publics du campus<a class="aller" href="https://uri.amap.com/search?keyword=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E6%B5%B4%E5%AE%A4&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">→ y aller</a></div>
+        <div class="meta">À l'ouest du resto U Yixin <span class="cn">益新食堂</span>, près de la porte ouest · ~15h30–22h30</div>
+        <div class="desc">Douches collectives pour les résidents du campus, payées à la <strong>carte campus</strong>, avec casiers pour les affaires. Horaires légèrement ajustés selon la saison.</div>
+        <div class="desc"><strong>Avant d'y aller&nbsp;:</strong> vérifiez le solde de la carte, évitez le pic après 21h (file d'attente), et couvrez-vous bien au retour en hiver.</div>
+      </div>
+    </div>
+    <div class="slot " data-img="douches.jpg">photo · les douches 上大浴室<br><span style="font-size:7pt">douches.jpg</span></div>
+  </div>
+
+  <h2 class="bloc">Les bibliothèques</h2>
+  <div class="lieu">
+    <div class="nom">Bibliothèque centrale <span class="cn">校本部图书馆</span><a class="aller" href="https://uri.amap.com/search?keyword=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E5%9B%BE%E4%B9%A6%E9%A6%86%20%E5%AE%9D%E5%B1%B1%E6%A0%A1%E5%8C%BA&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">→ y aller</a></div>
+    <div class="meta">À l'est de l'étang <span class="cn">泮池</span> · 8h–22h tous les jours · entrée par carte campus ou reconnaissance faciale</div>
+    <div class="desc">Le bâtiment emblématique du campus. La <strong>salle d'étude 24h/24 du rez-de-chaussée</strong> se réserve&nbsp;: WeCom <span class="cn">企业微信</span> → Workspace → <span class="cn">各类预约</span> → <span class="cn">24H学习空间座位预约</span>.</div>
+  </div>
+  <div class="lieu">
+    <div class="nom">Bibliothèque Qian Weichang <span class="cn">钱伟长图书馆</span><span class="badge">côté UTSEUS</span><a class="aller" href="https://uri.amap.com/search?keyword=%E9%92%B1%E4%BC%9F%E9%95%BF%E5%9B%BE%E4%B9%A6%E9%A6%86&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">→ y aller</a></div>
+    <div class="meta">Zone est, à côté du bâtiment UTSEUS · le grand bâtiment rond</div>
+    <div class="desc">Bibliothèque, musée de l'université et mémorial réunis dans une spirale de béton — la plus proche de vos salles de cours, et la plus photogénique.</div>
+  </div>
+  <div class="slot large" data-img="bibliotheque.jpg">photo · la bibliothèque<br><span style="font-size:7pt">bibliotheque.jpg</span></div>
+
+  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">08</span></div>
+</section>
+
+<section class="page lisere" id="services-campus">
+  <div class="vertical">Campus</div>
+  <div class="sur-titre">Chapitre II · suite</div>
+  <h1 class="chapitre">Courses, colis,<br><span class="rouge">impression &amp; vélo</span></h1>
+
+  <h2 class="bloc">Acheter sur le campus</h2>
+  <div class="grille-2">
+    <div class="lieu">
+      <div class="nom">Supermarché éducatif <span class="cn">上海教育超市</span><a class="aller" href="https://uri.amap.com/search?keyword=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%20%E6%95%99%E8%82%B2%E8%B6%85%E5%B8%82&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">→ y aller</a></div>
+      <div class="meta">Face au terrain de basket de la porte ouest</div>
+      <div class="desc">Le bazar du quotidien&nbsp;: hygiène, snacks, papeterie. À côté, une <strong>boutique de fournitures</strong>&nbsp;; et au fond, une <strong>librairie d'occasion</strong> où l'on achète — et revend — ses livres. Paiement carte campus, WeChat ou Alipay.</div>
+    </div>
+    <div class="slot " data-img="supermarche-campus.jpg">photo · le 教育超市<br><span style="font-size:7pt">supermarche-campus.jpg</span></div>
+  </div>
+  <p>Chaque resto U (Yixin, Shuixiu, Wuxin, Liuyun) a aussi une <strong>supérette au rez-de-chaussée</strong> pour le dépannage entre deux cours.</p>
+
+  <h2 class="bloc">Recevoir ses colis <span class="cn">菜鸟驿站</span></h2>
+  <ul class="liste">
+    <li><strong>Sur le campus&nbsp;:</strong> le Cainiao <strong>face aux douches</strong> — SF Express, EMS, la Poste, Yuantong, Shentong, Zhongtong, Baishi, Tiantian… <strong>8h–20h30</strong>.</li>
+    <li><strong>Nouveau Siècle <span class="cn">新世纪大学生村</span>&nbsp;:</strong> côté sud-ouest du bâtiment 13.</li>
+    <li><strong>Zone est&nbsp;:</strong> derrière le resto U Liuyun <span class="cn">留韵食堂</span> — le plus proche de l'UTSEUS.</li>
+    <li><strong>Courrier important&nbsp;:</strong> le bureau de poste hors de la porte ouest reçoit les lettres recommandées.</li>
+    <li><strong>Attention&nbsp;:</strong> un colis est gardé <strong>une semaine</strong>, ensuite il est automatiquement «&nbsp;réceptionné&nbsp;» — allez le chercher vite.</li>
+  </ul>
+  <div class="panneau"><strong>Vos adresses de livraison (à coller dans Taobao)&nbsp;:</strong><br>
+    Nouveau Siècle&nbsp;: <span class="cn">上海市宝山区大场镇聚丰园路88号新世纪大学生村</span> — 200444<br>
+    Zone sud&nbsp;: <span class="cn">上海市宝山区大场镇上大路98号上海大学南区宿舍</span> — 200444<br>
+    <span style="font-size:9pt">Pour une lettre recommandée, ajoutez toujours votre numéro de chambre.</span>
+  </div>
+
+  <h2 class="bloc">Imprimer <span class="cn">打印复印</span></h2>
+  <div class="grille-2">
+    <div class="panneau"><strong>Boutiques</strong><br><span class="cn">加宋图文</span> (près de la porte ouest) — 8h–22h<br><span class="cn">婧美图文</span>, rue commerçante Micheng bât. 24, 2ᵉ étage (près de la porte sud) — 7h30–22h</div>
+    <div class="panneau"><strong>Bornes libre-service</strong> (carte campus, vérifiez le solde)<br>Resto U zone sud, 1ᵉʳ étage · Bibliothèque centrale, 5ᵉ étage · Bibliothèque Qian Weichang, 4ᵉ étage · rez-de-chaussée des bâtiments <span class="cn">xj</span> · Économie zone est, bât. 1, 2ᵉ étage</div>
+  </div>
+
+  <h2 class="bloc">Réparer son vélo <span class="cn">修车铺</span></h2>
+  <p>Une dizaine d'ateliers sur et autour du campus, en général <strong>7h–21h</strong>&nbsp;: face à la porte ouest, devant les bâtiments <strong>M, P, T et U</strong>, à l'entrée de la zone sud, entre les bâtiments Sud&nbsp;6 et 8, devant Sud&nbsp;10, et entre le resto U sud et Sud&nbsp;11. Pneu à plat, frein, chaîne&nbsp;: c'est réglé en dix minutes.</p>
+  <ul class="liste">
+    <li>Plusieurs font aussi <strong>serrurier</strong> (<span class="cn">钥匙铺</span>)&nbsp;: clé de chambre perdue, on en refait une sur place.</li>
+    <li><strong>Demandez toujours le prix avant</strong> — ça évite les malentendus.</li>
+  </ul>
+
+  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">09</span></div>
 </section>
 
 <!-- ===================== CH 3 : SIM ===================== -->
@@ -436,7 +548,7 @@
 
   <div class="conseil"><b>Conseil UTSEUS&nbsp;:</b> venez avec un camarade sinophone ou un buddy UTSEUS — l'enregistrement passeport prend du temps et le personnel de ces boutiques de quartier parle rarement anglais. Téléphone débloqué obligatoire.</div>
 
-  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">08</span></div>
+  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">10</span></div>
 </section>
 
 <!-- ===================== CH 4 : BANQUE (2 pages) ===================== -->
@@ -478,7 +590,7 @@
 
   <div class="conseil"><b>Fin de semestre&nbsp;:</b> videz ou clôturez le compte avant de rentrer (passeport + carte dans n'importe quelle agence de la banque) — un compte dormant est pénible à gérer depuis la France.</div>
 
-  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">09</span></div>
+  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">11</span></div>
 </section>
 <!-- ===================== CH 5 : MANGER (2 pages) ===================== -->
 <section class="page lisere" id="manger">
@@ -491,7 +603,7 @@
   <div class="lieu">
     <div class="nom">La porte ouest <span class="cn">弘基广场</span><span class="badge prix">15–40 RMB</span><a class="aller" href="https://uri.amap.com/search?keyword=%E5%BC%98%E5%9F%BA%E6%96%87%E5%8C%96%E4%BC%91%E9%97%B2%E5%B9%BF%E5%9C%BA&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">→ y aller</a></div>
     <div class="meta">Sortie ouest du campus, côté Nanchen Rd / Shangda Rd · 5–10 min à pied</div>
-    <div class="desc">Sur les cartes c'est «&nbsp;Hongji Plaza&nbsp;», mais tous les semestres l'appellent simplement «&nbsp;la porte ouest&nbsp;». LA rue à bouffe des étudiants SHU&nbsp;: malatang, brochettes chuanchuan (le stand <span class="cn">鸿基歪串串</span> est culte), hotpot coréen de tteokbokki, bibimbap en bol de pierre, friture et une rangée de bubble teas. Les stands changent chaque semestre&nbsp;: suivez les files d'attente, l'affluence est le vrai guide. Pic 17h30–21h.</div>
+    <div class="desc">Sur les cartes c'est «&nbsp;Hongji Plaza&nbsp;», mais tous les semestres l'appellent simplement «&nbsp;la porte ouest&nbsp;». Ouvert <strong>24h/24</strong>, face au Nouveau Siècle. LA rue à bouffe des étudiants SHU&nbsp;: malatang, brochettes chuanchuan (le stand <span class="cn">鸿基歪串串</span> est culte), hotpot coréen de tteokbokki, bibimbap en bol de pierre, friture et une rangée de bubble teas. Les stands changent chaque semestre&nbsp;: suivez les files d'attente, l'affluence est le vrai guide. Pic 17h30–21h.</div>
   </div>
   <div class="lieu">
     <div class="nom">Jufengyuan Road <span class="cn">聚丰园路</span><span class="badge prix">20–70 RMB</span><a class="aller" href="https://uri.amap.com/search?keyword=%E8%81%9A%E4%B8%B0%E5%9B%AD%E8%B7%AF&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">→ y aller</a></div>
@@ -503,6 +615,12 @@
     <div class="nom">Jinqiu Road <span class="cn">锦秋路</span><span class="badge prix">20–35 RMB</span><a class="aller" href="https://uri.amap.com/search?keyword=%E9%94%A6%E7%A7%8B%E8%B7%AF%20%E5%A4%A7%E5%9C%BA%E9%95%87&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">→ y aller</a></div>
     <div class="meta">Côté nord du campus, à pied</div>
     <div class="desc">Rue de quartier avec supermarché, fruits et le malatang <span class="cn">汆悦麻辣烫</span>&nbsp;: on remplit son bol soi-même (légumes, tofu, nouilles, viandes), on paie au poids, on choisit le bouillon et le piment. Le format le plus «&nbsp;végétarien-compatible&nbsp;» de Chine.</div>
+  </div>
+
+  <div class="lieu">
+    <div class="nom">Rue T3 Micheng <span class="cn">芈城T3科创街</span><span class="badge">porte sud</span><a class="aller" href="https://uri.amap.com/search?keyword=%E8%8A%88%E5%9F%8ET3%E7%A7%91%E5%88%9B%E8%A1%97&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">→ y aller</a></div>
+    <div class="meta">Face à la porte sud, la plus proche des salles de cours</div>
+    <div class="desc">Restaurants, cafés, bubble tea et loisirs&nbsp;: l'option la plus rapide quand on sort de cours et qu'on ne veut pas traverser tout le campus jusqu'à la porte ouest.</div>
   </div>
 
   <h2 class="bloc">Les classiques à connaître</h2>
@@ -529,7 +647,7 @@
     </div>
   </div>
 
-  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">10</span></div>
+  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">12</span></div>
 </section>
 
 <section class="page lisere">
@@ -568,7 +686,7 @@
 
   <div class="conseil"><b>Conseil UTSEUS&nbsp;:</b> les rues (Hongji, Jufengyuan, Jinqiu) sont stables, mais les boutiques tournent chaque semestre. Avant de traverser la ville pour une adresse précise, vérifiez sur Dianping qu'elle existe encore.</div>
 
-  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">11</span></div>
+  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">13</span></div>
 </section>
 
 <!-- ===================== CH 5 : SORTIR (2 pages) ===================== -->
@@ -607,7 +725,7 @@
     <div class="desc"><strong>TAXX</strong>&nbsp;: le méga-club EDM/hip-hop que tout étudiant d'échange fait une fois — et les groupes d'étudiants étrangers entrent très souvent gratuitement via les promoteurs WeChat. <strong>44KW</strong>&nbsp;: le club le plus stylé de la ville, techno/house, deux salles, pour ceux qui viennent pour la musique. La place engloutie elle-même a décliné depuis 2022&nbsp;: on y va pour ces deux clubs, pas pour l'ambiance de la cour.</div>
   </div>
 
-  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">12</span></div>
+  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">14</span></div>
 </section>
 
 <section class="page lisere">
@@ -654,7 +772,7 @@
 
   <div class="conseil"><b>Le système des promoteurs&nbsp;:</b> les grands clubs recrutent des groupes d'étudiants internationaux via WeChat — entrée gratuite, parfois table et boissons offertes. Demandez aux anciens de vous ajouter aux groupes dès la première semaine. Aucune obligation d'achat&nbsp;; méfiance sur la qualité de l'open bar.</div>
 
-  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">13</span></div>
+  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">15</span></div>
 </section>
 <!-- ===================== CH 6 : SPORT (2 pages) ===================== -->
 <section class="page lisere" id="sport">
@@ -694,7 +812,7 @@
     </div>
   </div>
 
-  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">14</span></div>
+  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">16</span></div>
 </section>
 
 <section class="page lisere">
@@ -731,7 +849,7 @@
     <li><strong>Attention aux abonnements&nbsp;:</strong> les grandes chaînes classiques (Will's…) ferment des clubs depuis 2024 et les cartes prépayées sont dures à rembourser. Au mois ou à la séance, jamais à l'année.</li>
   </ul>
 
-  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">15</span></div>
+  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">17</span></div>
 </section>
 
 <!-- ===================== CH 7 : QUOTIDIEN (2 pages) ===================== -->
@@ -752,6 +870,12 @@
       <div class="nom">Lianhua <span class="cn">联华超市（锦秋店）</span><a class="aller" href="https://uri.amap.com/search?keyword=%E8%81%94%E5%8D%8E%E8%B6%85%E5%B8%82%20%E9%94%A6%E7%A7%8B&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">→ y aller</a></div>
       <div class="meta">Jinqiu Rd, 10–15 min à pied</div>
       <div class="desc">Le vrai supermarché de quartier&nbsp;: légumes, œufs, produits ménagers. Basique et complet — une semaine de courses&nbsp;: 50–150&nbsp;RMB.</div>
+    </div>
+    <div class="lieu">
+      <div class="nom">Sam's Club <span class="cn">山姆会员商店</span><span class="badge">5 min à pied</span><a class="aller" href="https://uri.amap.com/search?keyword=%E5%B1%B1%E5%A7%86%E4%BC%9A%E5%91%98%E5%95%86%E5%BA%97%20%E5%AE%9D%E5%B1%B1&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">→ y aller</a></div>
+      <div class="meta">Sortez du Nouveau Siècle <span class="cn">新世纪大学生村</span>, à gauche, 5 min — c'est sur la droite</div>
+      <div class="desc">Le plus grand supermarché des environs du campus, et le paradis du ravitaillement en gros&nbsp;: produits importés, fromages, viandes, portions XXL. Carte de membre à partager entre camarades, comme au METRO.</div>
+      <div class="slot " data-img="sams-club.jpg">photo · Sam's Club<br><span style="font-size:7pt">sams-club.jpg</span></div>
     </div>
     <div class="lieu">
       <div class="nom">Hema / Freshippo <span class="cn">盒马</span></div>
@@ -776,7 +900,7 @@
     <div class="desc">Jingwei Hui, en face du campus&nbsp;: pratique pour un dîner rapide, mais à moitié vide — pas d'attentes démesurées. Le Wanda est sur la ligne&nbsp;1 (Gongkang Rd), à ~25–35&nbsp;RMB de taxi&nbsp;: n'y allez que si vous êtes déjà dans le coin.</div>
   </div>
 
-  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">16</span></div>
+  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">18</span></div>
 </section>
 
 <section class="page lisere">
@@ -816,7 +940,7 @@
 
   <div class="conseil"><b>Conseil UTSEUS&nbsp;:</b> le jour de l'arrivée, achetez le strict nécessaire au supermarché du campus, puis commandez tout le reste sur Taobao dès que vous avez la SIM — c'est moins cher que n'importe quel magasin et ça arrive en 1 à 3 jours chez Cainiao.</div>
 
-  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">17</span></div>
+  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">19</span></div>
 </section>
 <!-- ===================== CH 8 : LIGNE 7 ===================== -->
 <section class="page lisere" id="ligne7">
@@ -894,7 +1018,7 @@
 
   <div class="conseil"><b>Conseil UTSEUS&nbsp;:</b> sorties en groupe (le Didi de retour passe de 80 à 20&nbsp;RMB par tête), passeport toujours sur soi, et le réflexe Gaode avec les noms chinois de ce guide. Pour les escapades hors Shanghai (Suzhou, Hangzhou…), voyez le guide AFEC — trains, billets et bons plans y sont couverts.</div>
 
-  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">18</span></div>
+  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">20</span></div>
 </section>
 
 <!-- ===================== CH 9 : CONTACTS ===================== -->
@@ -930,7 +1054,7 @@
 
   <div class="conseil" style="margin-top:6mm"><b>Bon semestre&nbsp;!</b> Guide rédigé par Anicet Barrios, Head Student Coordinator UTSEUS. Corrections et nouvelles adresses bienvenues — sur WeChat, évidemment.</div>
 
-  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">19</span></div>
+  <div class="pied"><a href="#sommaire">UTSEUS · Guide Baoshan</a><span class="num">21</span></div>
 </section>
 
 </body>
