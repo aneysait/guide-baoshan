@@ -11,8 +11,8 @@ from PIL import Image
 ROOT = os.path.dirname(os.path.abspath(__file__))
 HTML = os.path.join(ROOT, "guide-baoshan.html")
 IMGDIR = os.path.join(ROOT, "images")
-MAX_W = 1200          # largeur max : ~150 dpi sur une demi-page A4
-JPEG_QUALITY = 82
+MAX_W = 900           # largeur max : lisible à l'écran et correct à l'impression
+JPEG_QUALITY = 76
 
 def encode(path):
     im = Image.open(path)
@@ -21,7 +21,7 @@ def encode(path):
     if im.width > MAX_W:
         im = im.resize((MAX_W, round(im.height * MAX_W / im.width)), Image.LANCZOS)
     buf = io.BytesIO()
-    if path.lower().endswith(".png"):
+    if "qr" in os.path.basename(path).lower():
         im.save(buf, format="PNG", optimize=True)
         mime = "image/png"
     else:
@@ -31,20 +31,22 @@ def encode(path):
 
 def main():
     html = open(HTML, encoding="utf-8").read()
-    slots = re.findall(r'<div class="slot([^"]*)" data-img="([^"]+)">.*?</div>', html, re.S)
+    slots = re.findall(r'<(?:div|span) class="slot([^"]*)" data-img="([^"]+)"([^>]*)>.*?</(?:div|span)>', html, re.S)
     if not slots:
         print("aucun emplacement libre — tout est déjà rempli ?")
     filled = 0
-    for cls, name in slots:
+    for cls, name, extra in slots:
         path = os.path.join(IMGDIR, name)
         if not os.path.exists(path):
             print(f"  … {name} : en attente")
             continue
         mime, b64, size = encode(path)
-        pattern = re.compile(r'<div class="slot' + re.escape(cls) + r'" data-img="' + re.escape(name) + r'">.*?</div>', re.S)
-        repl = (f'<div class="slot{cls} filled" data-img="{name}">'
-                f'<img src="data:{mime};base64,{b64}" alt=""></div>')
-        html = pattern.sub(lambda m: repl, html, count=1)
+        pattern = re.compile(r'<(div|span) class="slot' + re.escape(cls) + r'" data-img="' + re.escape(name) + r'"' + re.escape(extra) + r'>.*?</(?:div|span)>', re.S)
+        def _sub(m):
+            tag = m.group(1)
+            return (f'<{tag} class="slot{cls} filled" data-img="{name}"{extra}>'
+                    f'<img src="data:{mime};base64,{b64}" alt=""></{tag}>')
+        html = pattern.sub(_sub, html, count=1)
         filled += 1
         print(f"  ✓ {name} : {size // 1024} Ko incrustés")
     open(HTML, "w", encoding="utf-8").write(html)
