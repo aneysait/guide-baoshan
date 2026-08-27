@@ -50,7 +50,13 @@
     @page{size:A4;margin:0;}
   }
   @media (max-width:220mm){
-    .page{width:100%;min-height:auto;padding:9vw 6vw;margin:0 0 4vw 0;}
+    .page{width:100%;min-height:100vh;padding:9vw 6vw;margin:0 0 4vw 0;display:flex;flex-direction:column;}
+    .couverture .titre-couv {font-size: 16vw !important; line-height: 1.1;}
+    .couverture .titre-couv small {font-size: 6vw !important; margin-top:2mm;}
+    .couverture .couv-hanzi {font-size: 5vw !important;}
+    .vertical{display:none;}
+    .couv-haut, .couv-bas {padding: 6vw !important;}
+    .couv-centre {padding: 0 6vw !important;}
   }
 
   /* liseré rouge à gauche, comme le guide AFEC */
@@ -177,7 +183,7 @@
 <body>
 
 <section class="page couverture">
-  <div class="couv-haut"><span>UTSEUS</span><span>2026 · 2027</span></div>
+  <div class="couv-haut"><span>UTSEUS</span><span>A26 semester</span></div>
   <div class="couv-centre">
     <div class="ligne">Survival Guide · Special Edition</div>
     <div class="titre-couv">SIM & BANK<small>Baoshan · Shanghai University</small></div>
@@ -199,10 +205,10 @@
   <div class="bandeau-rouge">The mandatory order of steps</div>
   <ul class="liste">
     <li><strong>1. SIM card first (Passport only)&nbsp;:</strong> Banks strictly require an active Chinese phone number for SMS verification. Get your SIM card on your first or second day.</li>
-    <li><strong>2. Bank account next (SIM + Passport + Residence Registration)&nbsp;:</strong> With your Chinese number and the residence registration (<span class="cn">临时住宿登记单</span>) that you must request at your hotel reception (or <a href="https://gaj.sh.gov.cn/crj/24hr/web/zcbd/login?relogin=true" target="_blank" rel="noopener">register yourself online</a> if you are in an apartment), go to the partner branch to open your account.</li>
+    <li><strong>2. Bank account next (SIM + Passport + Residence Registration)&nbsp;:</strong> With your Chinese number and the residence registration (<span class="cn">临时住宿登记单</span>) that you must request at your hotel reception (or <a href="https://gaj.sh.gov.cn/crj/24hr/web/zcbd/login?relogin=true" target="_blank" rel="noopener">register yourself online</a> if you are in an apartment), you can open your account.</li>
   </ul>
 
-  <p style="margin-top:4mm;">The addresses selected below are located immediately around the Baoshan campus, and are used to English-speaking international students.</p>
+  <p style="margin-top:4mm;">The addresses selected below are located immediately around the Baoshan campus.</p>
 
   <ol class="sommaire">
     <li><a href="#sim">Get a SIM card</a> <em>Phone · p.&nbsp;03</em></li>
@@ -241,14 +247,14 @@
     <div class="desc">Small official agency (Dachang M-Zone). Very convenient as it is located on the same street as the Unicom branch.</div>
   </div>
 
-  <div class="panneau"><strong>Budget for a semester&nbsp;: 19 to 59&nbsp;RMB/month.</strong> Campus plans (<span class="cn">校园卡</span>, ~29&nbsp;RMB with 100&nbsp;GB+) often require a first top-up of ~100&nbsp;RMB — the promo rate will easily cover your stay. Ask for <strong>prepaid with no contract</strong>&nbsp;: <span class="cn">预付费，无合约</span> — and refuse the 12–24 month contracts they will automatically offer you.</div>
+  <div class="panneau"><strong>Budget for a semester&nbsp;: 19 to 59&nbsp;RMB/month.</strong> Ask for <strong>prepaid with no contract</strong>&nbsp;: <span class="cn">预付费，无合约</span> — and refuse the 12–24 month contracts they will automatically offer you.</div>
 
   <ul class="liste">
     <li><strong>Keep the number active all semester&nbsp;:</strong> a prepaid number with zero balance is suspended then recycled (~90 days) — and with it goes your access to WeChat Pay and your bank. Do small regular top-ups via Alipay.</li>
-    <li><strong>When leaving&nbsp;:</strong> cancel in-store (<span class="cn">销号</span>) or continue topping up from abroad if you want to keep WeChat/Alipay active.</li>
+    <li><strong>When leaving&nbsp;:</strong> cancel in-store (<span class="cn">销号</span>) before leaving. Remember to change your phone number on WeChat and Alipay to your home country number.</li>
   </ul>
 
-  <div class="conseil"><b>UTSEUS Tip&nbsp;:</b> come with a Chinese-speaking friend or a UTSEUS buddy — passport registration takes time and the staff in these neighborhood shops rarely speak English. Unlocked phone mandatory.</div>
+  <div class="conseil"><b>UTSEUS Tip&nbsp;:</b> come with a Chinese-speaking friend or a UTSEUS buddy — passport registration takes time and the staff in these neighborhood shops rarely speak English.</div>
 
   <div class="pied"><a href="#sommaire">UTSEUS · Baoshan Guide</a><span class="num">03</span></div>
 </section>
@@ -258,40 +264,40 @@
   <div class="vertical">Money</div>
   <div class="sur-titre">Chapter II</div>
   <h1 class="chapitre">Open a<br><span class="rouge">bank account</span></h1>
-  <p class="chapo">General information (currency, cards, Alipay/WeChat with foreign cards) is in the AFEC guide. Here: branches around campus, and the reality of a one-semester X2 visa — banks decide case by case, so aim for the SHU partner branch as soon as you have the SIM and hotel registration.</p>
+  <p class="chapo">General information (currency, cards, Alipay/WeChat with foreign cards) is in the AFEC guide. Here: branches around campus, and the reality of a one-semester X2 visa — banks decide case by case, so aim for the SHU partner branch as soon as you have the SIM and hotel registration. All ATMs of these 4 major banks have an English interface and accept foreign cards.</p>
 
   <h2 class="bloc">The four major banks near campus</h2>
   <div class="lieu">
     <div class="nom">Bank of China — Qilianshan Road <span class="cn">中国银行祁连山路支行</span><span class="badge">SHU partner</span><a class="aller" href="https://uri.amap.com/search?keyword=%E4%B8%AD%E5%9B%BD%E9%93%B6%E8%A1%8C%E7%A5%81%E8%BF%9E%E5%B1%B1%E8%B7%AF%E6%94%AF%E8%A1%8C&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">→ go there</a></div>
-    <div class="meta">165 Jufengyuan Rd · ~10 min by bike from the west gate</div>
+    <div class="meta">165 Jufengyuan Rd · less than 5 min by bike from the west gate</div>
     <div class="desc">The branch cited in the official SHU international student handbook: they process foreign students all day and the staff is used to passports. By far your best chances.</div>
-    <div class="desc"><strong>Game-changing tip&nbsp;:</strong> pre-book the opening online ("BOC Appointment for Account Opening": Foreigner profile, passport photo, Qilianshan branch) — 30&nbsp;min instead of 2&nbsp;hours.</div>
+    <div class="desc"><strong>Game-changing tip&nbsp;:</strong> pre-book the opening via the "BOC Appointment for Account Opening" WeChat Mini Program (Foreigner profile, passport photo, Qilianshan branch) — 30&nbsp;min instead of 2&nbsp;hours.</div>
   </div>
   <div class="lieu">
     <div class="nom">China Construction Bank — Jinqiu Road <span class="cn">中国建设银行锦秋路支行</span><a class="aller" href="https://uri.amap.com/search?keyword=%E4%B8%AD%E5%9B%BD%E5%BB%BA%E8%AE%BE%E9%93%B6%E8%A1%8C%E9%94%A6%E7%A7%8B%E8%B7%AF%E6%94%AF%E8%A1%8C&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">→ go there</a></div>
-    <div class="meta">Jinqiu Xintiandi, 809 Jinqiu Rd · 15–20 min walk</div>
+    <div class="meta">Jinqiu Xintiandi, 809 Jinqiu Rd · 10 min walk</div>
     <div class="desc">The closest large bank to the Jinqiu/Nanchen area. Opens accounts for foreign students, but a small branch might hesitate on an X2 — success varies depending on the teller. Their ATMs accept foreign Visa/Mastercard.</div>
   </div>
   <div class="lieu">
     <div class="nom">ICBC — Jufengyuan Road <span class="cn">中国工商银行聚丰园路支行</span><a class="aller" href="https://uri.amap.com/search?keyword=%E4%B8%AD%E5%9B%BD%E5%B7%A5%E5%95%86%E9%93%B6%E8%A1%8C%E8%81%9A%E4%B8%B0%E5%9B%AD%E8%B7%AF%E6%94%AF%E8%A1%8C&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">→ go there</a></div>
     <div class="meta">458 Jufengyuan Rd · 10–15 min walk from campus</div>
-    <div class="desc">Very close to the west gate, this is one of the big four national banks. Excellent alternative if Bank of China is too busy.</div>
+    <div class="desc">Very close to the west gate. Excellent alternative if Bank of China is too busy.</div>
   </div>
   <div class="lieu">
     <div class="nom">Agricultural Bank of China — Jinqiu Road <span class="cn">中国农业银行（锦秋路716号）</span><span class="badge verif">to verify</span><a class="aller" href="https://uri.amap.com/search?keyword=%E4%B8%AD%E5%9B%BD%E5%86%9C%E4%B8%9A%E9%93%B6%E8%A1%8C%20%E9%94%A6%E7%A7%8B%E8%B7%AF&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">→ go there</a></div>
     <div class="meta">716 Jinqiu Rd · walking distance from the northwest of campus</div>
-    <div class="desc">Small neighborhood branch, also walking distance — but small branches sometimes send foreigners to a larger main branch. All ATMs of these 4 major banks have an English interface and accept foreign cards.</div>
+    <div class="desc">Small neighborhood branch, also walking distance — but small branches sometimes send foreigners to a larger main branch.</div>
   </div>
 
   <h2 class="bloc">Documents to bring — all of them, every time</h2>
   <ul class="liste">
     <li>Passport + visa page (and a photocopy of each)</li>
-    <li>SHU Admission Letter, then student card once you have it</li>
+    <li>SHU Admission Letter</li>
     <li>Residence Registration Form <span class="cn">临时住宿登记单</span> (must be requested at your hotel reception; if you are in an apartment, you must <a href="https://gaj.sh.gov.cn/crj/24hr/web/zcbd/login?relogin=true" target="_blank" rel="noopener">register online here</a>)</li>
     <li>Active Chinese phone number — mandatory, everything is verified via SMS</li>
     <li>~100&nbsp;RMB to activate the card (issuance fee 0–20&nbsp;RMB)</li>
   </ul>
-  <p>At the counter, if asked why&nbsp;: <span class="cn">校园卡充值</span> (top up campus card), reimbursements, and daily expenses. Keep it simple, study-related — and never mention working.</p>
+  <p>At the counter, if asked why&nbsp;: <span class="cn">校园卡充值</span> (top up campus card), reimbursements, and daily expenses. Keep it simple, study-related.</p>
 
   <div class="panneau"><strong>If the bank refuses your X2 visa&nbsp;:</strong> Plan B described in the AFEC guide (foreign card linked to Alipay/WeChat, 0% fees up to 200&nbsp;RMB per transaction) covers all daily life in Baoshan. Its real limit: impossible to <em>receive</em> money — hongbao, dorm deposit refund, transfer from a friend. This is the main reason to insist on the Chinese account; if you get it, link it immediately to Alipay and WeChat.</div>
 
