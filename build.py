@@ -34,6 +34,8 @@ PHONE_CSS = """
   .couv-bas{padding:0 18px 26px;}
   .titre-couv{font-size:56pt;}
   .titre-couv small{font-size:18pt;}
+  .titre-couv.duo{font-size:25pt;}
+  .titre-couv.duo small{font-size:12pt;}
   .couv-sous{font-size:16px;max-width:none;}
   .vertical{display:none;}
   .pied{position:static;margin-top:22px;padding-top:10px;border-top:.3mm solid var(--filet);}
