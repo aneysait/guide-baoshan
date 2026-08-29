@@ -229,6 +229,14 @@
   .gate{position:absolute;transform:translate(-50%,-50%);min-width:4.4mm;height:4.4mm;padding:0 .6mm;
     background:var(--encre);color:#fff;font-family:var(--etroit);font-weight:700;font-size:7.5pt;
     display:flex;align-items:center;justify-content:center;border-radius:.6mm;box-shadow:0 0 0 .4mm #fff;}
+  .carte-cle{margin-top:3mm;display:grid;gap:1.8mm;font-size:9pt;line-height:1.35;}
+  .carte-cle > div{display:flex;align-items:flex-start;gap:2.8mm;}
+  .carte-cle .gate,.carte-cle .lib,.carte-cle .pin,.carte-cle .zone{
+    position:static;transform:none;flex:none;margin-top:.2mm;box-shadow:none;}
+  .carte-cle .zone{display:inline-flex;align-items:center;justify-content:center;height:4.6mm;padding:0 1.8mm;
+    background:#fff;border:.35mm solid var(--encre-douce);border-radius:.8mm;
+    font-family:var(--etroit);font-weight:700;font-size:7pt;letter-spacing:.04em;color:var(--encre);}
+  .carte-cle .lot{display:inline-flex;gap:1.2mm;flex:none;margin-top:.2mm;}
   .credit{font-family:var(--etroit);font-size:8pt;letter-spacing:.05em;color:var(--encre-douce);margin-top:1.5mm;}
   .carte-legende .n{display:inline-flex;width:4.6mm;height:4.6mm;border-radius:50%;background:var(--rouge);color:#fff;font-family:var(--etroit);font-weight:700;font-size:8pt;align-items:center;justify-content:center;margin-right:2mm;flex:none;}
   .carte-legende div{display:flex;align-items:baseline;}
@@ -523,7 +531,7 @@
   <div class="vertical">Campus</div>
   <div class="sur-titre">Chapter III</div>
   <h1 class="chapitre">Finding your way<br><span class="rouge">around campus</span></h1>
-  <p class="chapo">UTSEUS is the <span class="cn">中欧工程技术学院</span> building on the east side, near the Nanchen Road gate. Green pins are the six canteens, dark squares the gates, red circles the two libraries. For the exhaustive version — every building with its number — open <a href="https://aneysait.github.io/guide-baoshan/images/carte-campus-officielle.jpg" target="_blank" rel="noopener">the university's official campus map</a>.</p>
+  <p class="chapo">Two things to fix in your head on the first day: <strong>UTSEUS</strong> <span class="cn">中欧工程技术学院</span> sits on the <strong>east side</strong>, by the Nanchen Road gate, and the <strong>metro is at the north gate</strong>. Everything else is keyed underneath. For every building with its number, open <a href="https://aneysait.github.io/guide-baoshan/images/carte-campus-officielle.jpg" target="_blank" rel="noopener">the university's official campus map</a>.</p>
 
   <figure style="margin:3mm 0 0 0">
     <div class="scroll-x"><div class="carte-wrap" role="img" aria-label="Map of the Baoshan campus showing the UTSEUS building, the six canteens, the gates, the sports zone, the tennis courts, the innovation centre and the southern football pitch">
@@ -560,14 +568,12 @@
     <div><span class="n vert">5</span><span>Wuxin <span class="cn">吾馨</span><span class="adr">south, by the residences</span></span></div>
     <div><span class="n vert">6</span><span>Liuyun <span class="cn">留韵</span><span class="adr">east zone · closest to UTSEUS</span></span></div>
   </div>
-  <div class="legende">
-    <span class="note"><strong>N</strong> north gate — the metro</span>
-    <span class="note"><strong>W</strong> west gate — the food street</span>
-    <span class="note"><strong>E</strong> east · <strong>E2</strong> east second — Nanchen Rd side</span>
-    <span class="note"><strong>S</strong> south · <strong>S2</strong> south second</span>
-    <span class="note"><strong>L1</strong> main library · <strong>L2</strong> Qian Weichang library</span>
+  <div class="carte-cle">
+    <div><span class="lot"><span class="gate">N</span><span class="gate">S</span></span><span><strong>Dark squares — the gates.</strong> <strong>N</strong> north, where the metro is · <strong>E</strong> and <strong>E2</strong> east, on the Nanchen Rd side · <strong>S</strong> and <strong>S2</strong> south. The <span style="color:var(--rouge-fonce)"><strong>west gate</strong></span> is labelled in red instead: it is the food street, and the one you will use most.</span></div>
+    <div><span class="lot"><span class="lib">L1</span><span class="lib">L2</span></span><span><strong>Dark red circles — the libraries.</strong> <strong>L1</strong> the main library, eight floors and the 24-hour room · <strong>L2</strong> Qian Weichang, the round one by UTSEUS.</span></div>
+    <div><span class="zone">SPORTS ZONE</span><span><strong>Pale labels — areas, not buildings.</strong> The sports zone fills the space between the two athletics tracks; tennis is the north-west corner; the innovation centre sits just south-east of the Shuixiu canteen; the football pitch is down in the J zone.</span></div>
   </div>
-  <div class="credit">The <strong>sports zone</strong> runs between the two athletics tracks: gymnasium, pool, training hall and the B/C-zone basketball courts. The <strong>innovation centre</strong> sits just south-east of the Shuixiu canteen. Base map © OpenStreetMap contributors (ODbL).</div>
+  <div class="credit">Green circles are the six canteens, listed above and detailed in <a href="#campus">chapter&nbsp;IV</a>; the sports facilities have <a href="#carte-sport">their own map</a>. Base map © OpenStreetMap contributors (ODbL).</div>
 
   <div class="pied"><a href="#sommaire">UTSEUS · Baoshan Handbook</a><span class="num">08</span></div>
 </section>
