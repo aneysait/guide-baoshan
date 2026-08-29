@@ -109,7 +109,10 @@ def page(lang_css, body, other, label, title_suffix=""):
               f'<a href="{other[0]}">{other[1]}</a></div>\n')
     return ("<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n"
             "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n"
-            + lang_css + "</style>\n</head>\n<body>\n" + switch + body + "\n</body>\n</html>\n")
+            + (lang_css.replace("<title>Baoshan Handbook</title>",
+                                f"<title>Baoshan Handbook{title_suffix}</title>")
+               if title_suffix else lang_css)
+            + "</style>\n</head>\n<body>\n" + switch + body + "\n</body>\n</html>\n")
 
 
 def main():
@@ -121,7 +124,7 @@ def main():
 
     phone_body = wrap_maps(body)
     phone = page(css + SWITCH_CSS + PHONE_CSS, phone_body,
-                 ("index.html", "Open the PC edition →"), "Phone edition")
+                 ("index.html", "Open the PC edition →"), "Phone edition", " · Phone")
     open(os.path.join(ROOT, "phone.html"), "w", encoding="utf-8").write(phone)
 
     for f in ("index.html", "phone.html"):
