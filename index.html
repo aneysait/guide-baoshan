@@ -246,9 +246,16 @@
     color:var(--encre-douce);margin:1mm 0 0 14mm;}
   .sommaire .sub a{color:var(--encre-douce);}
   .sommaire .sub a:hover{color:var(--rouge);}
+
+  .switch{position:sticky;top:0;z-index:50;display:flex;justify-content:center;gap:4mm;
+    background:var(--encre);color:#fff;font-family:var(--etroit);font-size:9pt;
+    letter-spacing:.18em;text-transform:uppercase;padding:2.5mm 4mm;}
+  .switch a{color:#fff;border-bottom:.3mm solid rgba(255,255,255,.5);}
+  @media print{.switch{display:none;}}
 </style>
 </head>
 <body>
+<div class="switch"><span>PC edition</span><a href="phone.html">Open the phone edition →</a></div>
 
 
 <!-- ===================== COVER ===================== -->
@@ -420,10 +427,10 @@
 
   <div class="carte-legende">
     <div><span class="n vert">1</span><span>Yixin <span class="cn">益新</span><span class="adr">west of the library</span></span></div>
-    <div><span class="n vert">4</span><span>Shuixiu <span class="cn">水秀</span><span class="adr">teaching zone</span></span></div>
     <div><span class="n vert">2</span><span>Ermei <span class="cn">尔美</span><span class="adr">north of the pond, by the sports fields</span></span></div>
-    <div><span class="n vert">5</span><span>Wuxin <span class="cn">吾馨</span><span class="adr">south, by the dorm area</span></span></div>
     <div><span class="n vert">3</span><span>Shanming <span class="cn">山明</span><span class="adr">facing buildings O/I · KFC</span></span></div>
+    <div><span class="n vert">4</span><span>Shuixiu <span class="cn">水秀</span><span class="adr">teaching zone</span></span></div>
+    <div><span class="n vert">5</span><span>Wuxin <span class="cn">吾馨</span><span class="adr">south, by the dorm area</span></span></div>
     <div><span class="n vert">6</span><span>Liuyun <span class="cn">留韵</span><span class="adr">east zone · closest to UTSEUS</span></span></div>
   </div>
   <div class="legende">
@@ -1544,19 +1551,9 @@
         <span class="adr">155 Jufengyuan Rd · 5 min</span></span>
     </div>
     <div>
-      <span class="n">4</span>
-      <span><strong>Bank of China</strong> <span class="cn">中国银行</span>
-        <span class="adr">165 Jufengyuan Rd · 5 min · SHU partner</span></span>
-    </div>
-    <div>
       <span class="n sim">2</span>
       <span><strong>China Telecom</strong> <span class="cn">中国电信</span>
         <span class="adr">329 Jufengyuan Rd · 10 min</span></span>
-    </div>
-    <div>
-      <span class="n">5</span>
-      <span><strong>China Construction Bank</strong> <span class="cn">中国建设银行</span>
-        <span class="adr">809 Jinqiu Rd · 10 min</span></span>
     </div>
     <div>
       <span class="n sim">3</span>
@@ -1564,19 +1561,29 @@
         <span class="adr">189 Jufengyuan Rd · 15 min</span></span>
     </div>
     <div>
+      <span class="n">4</span>
+      <span><strong>Bank of China</strong> <span class="cn">中国银行</span>
+        <span class="adr">165 Jufengyuan Rd · 5 min · SHU partner</span></span>
+    </div>
+    <div>
+      <span class="n">5</span>
+      <span><strong>China Construction Bank</strong> <span class="cn">中国建设银行</span>
+        <span class="adr">809 Jinqiu Rd · 10 min</span></span>
+    </div>
+    <div>
       <span class="n">6</span>
       <span><strong>ICBC</strong> <span class="cn">中国工商银行</span>
         <span class="adr">458 Jufengyuan Rd · 15 min</span></span>
     </div>
     <div>
-      <span class="n" style="background:var(--encre)">·</span>
-      <span><strong>West gate</strong> <span class="cn">西门</span>
-        <span class="adr">Your starting point for every walk above</span></span>
-    </div>
-    <div>
       <span class="n">7</span>
       <span><strong>Agricultural Bank of China</strong> <span class="cn">中国农业银行</span>
         <span class="adr">716 Jinqiu Rd · 20 min</span></span>
+    </div>
+    <div>
+      <span class="n" style="background:var(--encre)">·</span>
+      <span><strong>West gate</strong> <span class="cn">西门</span>
+        <span class="adr">Your starting point for every walk above</span></span>
     </div>
   </div>
 
