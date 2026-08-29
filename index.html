@@ -222,6 +222,9 @@
   .legende span.l.l15::before{background:#9E7B54;}
   .legende span.note::before{content:none;}
   .mlab.plain{background:rgba(255,255,255,.92);border-color:var(--encre-douce);color:var(--encre);}
+  .lib{position:absolute;transform:translate(-50%,-50%);min-width:4.6mm;height:4.6mm;padding:0 .6mm;
+    background:var(--rouge-fonce);color:#fff;font-family:var(--etroit);font-weight:700;font-size:7.5pt;
+    display:flex;align-items:center;justify-content:center;border-radius:50%;box-shadow:0 0 0 .4mm #fff;}
   .gate{position:absolute;transform:translate(-50%,-50%);min-width:4.4mm;height:4.4mm;padding:0 .6mm;
     background:var(--encre);color:#fff;font-family:var(--etroit);font-weight:700;font-size:7.5pt;
     display:flex;align-items:center;justify-content:center;border-radius:.6mm;box-shadow:0 0 0 .4mm #fff;}
@@ -440,7 +443,7 @@
   <div class="vertical">Campus</div>
   <div class="sur-titre">Chapter III</div>
   <h1 class="chapitre">Finding your way<br><span class="rouge">around campus</span></h1>
-  <p class="chapo">UTSEUS is the <span class="cn">中欧工程技术学院</span> building on the east side, near the Nanchen Road gate. Green pins are the six canteens, dark squares the gates.</p>
+  <p class="chapo">UTSEUS is the <span class="cn">中欧工程技术学院</span> building on the east side, near the Nanchen Road gate. Green pins are the six canteens, dark squares the gates, red circles the two libraries.</p>
 
   <figure style="margin:3mm 0 0 0">
     <div class="carte-wrap" role="img" aria-label="Map of the Baoshan campus showing the UTSEUS building, the six canteens, the gates, the sports zone, the tennis courts, the innovation centre and the southern football pitch">
@@ -453,6 +456,8 @@
       <span class="mlab plain" style="left:21.0%;top:27.8%">TENNIS</span>
       <span class="mlab plain" style="left:63.0%;top:45.8%;transform:translate(-50%,60%)">INNOVATION CENTRE</span>
       <span class="mlab plain" style="left:44.6%;top:96.9%;transform:translate(-50%,-160%)">FOOTBALL · J ZONE</span>
+      <span class="lib" style="left:42.3%;top:40.3%">L1</span>
+      <span class="lib" style="left:79.8%;top:58.3%">L2</span>
       <span class="gate" style="left:27.7%;top:17.2%">N</span>
       <span class="gate" style="left:67.6%;top:30.5%">E</span>
       <span class="gate" style="left:69.7%;top:59.0%">E2</span>
@@ -480,6 +485,7 @@
     <span class="note"><strong>W</strong> west gate — the food street</span>
     <span class="note"><strong>E</strong> east · <strong>E2</strong> east second — Nanchen Rd side</span>
     <span class="note"><strong>S</strong> south · <strong>S2</strong> south second</span>
+    <span class="note"><strong>L1</strong> main library · <strong>L2</strong> Qian Weichang library</span>
   </div>
   <div class="credit">The <strong>sports zone</strong> runs between the two athletics tracks: gymnasium, pool, training hall and the B/C-zone basketball courts. The <strong>innovation centre</strong> sits just south-east of the Shuixiu canteen. Base map © OpenStreetMap contributors (ODbL).</div>
 
@@ -568,7 +574,7 @@
   </div>
 
   <h2 class="bloc">Autumn semester 2026</h2>
-  <div class="panneau"><strong>Opening ceremony</strong> Friday 4 September · <strong>classes start</strong> Monday 7 September · <strong>semester ends</strong> Sunday 10 January 2027.<br>Two public holidays fall inside it: <strong>Mid-Autumn</strong> on 25 September and <strong>Golden Week</strong> from 1 to 7 October — the whole country travels then, so book early or stay put.</div>
+  <div class="panneau">The semester opens on <strong>Friday 4 September</strong> with the opening ceremony; <strong>classes start</strong> on <strong>Monday 7 September</strong> · <strong>semester ends</strong> Sunday 10 January 2027.<br>Two public holidays fall inside it: <strong>Mid-Autumn</strong> on 25 September and <strong>Golden Week</strong> from 1 to 7 October — the whole country travels then, so book early or stay put.</div>
   <table class="horaires" style="max-width:120mm">
     <tr><th>Block</th><th>Periods</th><th>Runs</th></tr>
     <tr><td class="f">Morning</td><td>1–4</td><td>8:00 – 11:40</td></tr>
@@ -588,14 +594,15 @@
   <p class="chapo">One password unlocks both. You can only set it <strong>once you have your student card</strong> — the form asks for the number printed on it.</p>
 
   <div class="bandeau-rouge">1 · Set your password</div>
-  <ul class="liste">
-    <li>Go to <strong>newsso.shu.edu.cn</strong> and click <strong>Self-Activation</strong>.</li>
-    <li><strong>Student/Staff ID</strong>: your student number, printed on your student card.</li>
-    <li><strong>Full Name</strong>: exactly as written on the card.</li>
-    <li><strong>ID Number</strong>: your passport number.</li>
-    <li><strong>Password</strong>: whatever you choose — this is the one you are creating.</li>
-    <li>The next page asks you to link a <strong>phone number</strong>, and it has to be a <strong>Chinese</strong> one — a foreign number will not be accepted. Get your SIM first (<a href="#sim">the SIM chapter</a>).</li>
-  </ul>
+  <p>Go to <strong>newsso.shu.edu.cn</strong> and click <strong>Self-Activation</strong>. The form asks for four things:</p>
+  <table class="horaires" style="max-width:150mm">
+    <tr><th>Field on the form</th><th>What to type</th></tr>
+    <tr><td class="f">Student/Staff ID</td><td>your student number, printed on your student card</td></tr>
+    <tr><td class="f">Full Name</td><td>exactly as written on the card</td></tr>
+    <tr><td class="f">ID Number</td><td>your passport number</td></tr>
+    <tr><td class="f">Password</td><td>one you choose — this is the password you are creating</td></tr>
+  </table>
+  <p>The next page asks you to link a <strong>phone number</strong>, and it has to be a <strong>Chinese</strong> one — a foreign number will not be accepted. Get your SIM first (<a href="#sim">the SIM chapter</a>).</p>
 
   <h2 class="bloc">Two more things worth knowing</h2>
   <ul class="liste">
