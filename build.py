@@ -55,6 +55,9 @@ PHONE_CSS = """
   .sommaire li{font-size:19px;padding:12px 0;}
   .sommaire .sub{margin-left:0;font-size:12px;line-height:1.7;}
   .carte-legende{grid-template-columns:1fr;font-size:14px;gap:9px;}
+  .panneau.afec{flex-direction:column;align-items:flex-start;gap:14px;}
+  .panneau.afec .afec-qr{align-self:center;}
+  .slot.qr{width:34mm!important;height:34mm!important;max-width:none!important;}
   .legende{font-size:14px;}
   /* maps and diagrams keep their labels legible by scrolling sideways */
   .scroll-x{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -18px;padding:0 18px;}
