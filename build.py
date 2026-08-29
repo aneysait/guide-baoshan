@@ -68,8 +68,21 @@ PHONE_CSS = """
 """
 
 
+def renumber(h):
+    """Footer numbers = physical sheet order. The cover is sheet 1 and carries none,
+    so the first numbered page is 02. Recomputed on every build so it cannot drift."""
+    seq = iter(range(2, 200))
+    return re.sub(r'<span class="num">\d+</span>',
+                  lambda m: '<span class="num">%02d</span>' % next(seq), h)
+
+
 def read_source():
     h = open(SRC, encoding="utf-8").read()
+    h2 = renumber(h)
+    if h2 != h:
+        open(SRC, "w", encoding="utf-8").write(h2)
+        print("  page numbers renumbered")
+        h = h2
     i = h.index("</style>")
     return h[:i], h[i + len("</style>"):]      # css block (without closing tag), body
 
