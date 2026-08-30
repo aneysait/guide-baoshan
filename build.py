@@ -67,8 +67,18 @@ PHONE_CSS = """
   .legende{font-size:14px;}
   /* maps and diagrams keep their labels legible by scrolling sideways */
   .scroll-x{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -18px;padding:0 18px;}
-  .scroll-x .carte-wrap,.scroll-x figure,.scroll-x svg{min-width:660px;}
-  .scroll-x .carte-wrap{width:660px;}
+  /* Les schemas vectoriels gardent le defilement lateral : leur texte est dans le SVG
+     et retrecirait avec le dessin. */
+  .scroll-x figure,.scroll-x svg{min-width:660px;}
+  /* Les cartes matricielles tiennent dans l'ecran : pastilles et etiquettes sont du HTML
+     dimensionne en mm, elles restent lisibles quelle que soit la taille du fond. */
+  .scroll-x .carte-wrap{width:100%;min-width:0;}
+  .carte-wrap .mlab{font-size:8px;padding:1px 3px;}
+  .carte-wrap .pin{width:17px;height:17px;font-size:10px;}
+  .carte-wrap .gate,.carte-wrap .lib{min-width:15px;height:15px;font-size:9px;}
+  .carte-wrap .mdot{width:9px;height:9px;}
+  .swipe{font-family:var(--etroit);font-size:12px;letter-spacing:.05em;
+    color:var(--encre-douce);margin-top:5px;}
   .horaires{font-size:13px;}
   .credit,.carte-cap,figcaption{font-size:12px!important;}
 """
@@ -122,7 +132,8 @@ def wrap_maps(body):
         body = body[:j] + "</div>" + body[j:]
     # the SVG figures (line 7 diagram, SIM/bank street map)
     body = re.sub(r'(<figure[^>]*>)(\s*<svg)', r'\1<div class="scroll-x">\2', body)
-    body = re.sub(r'(</svg>)', r'\1</div>', body)
+    body = re.sub(r'(</svg>)', r'\1</div>'
+                  r'<div class="swipe">Swipe the diagram sideways to see the whole of it.</div>', body)
     return body
 
 
