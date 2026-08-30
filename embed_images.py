@@ -14,12 +14,14 @@ IMGDIR = os.path.join(ROOT, "images")
 MAX_W = 900           # largeur max : lisible à l'écran et correct à l'impression
 JPEG_QUALITY = 76
 
-def encode(path):
+def encode(path, portrait=False):
     im = Image.open(path)
     if im.mode in ("RGBA", "P", "LA"):
         im = im.convert("RGB") if not path.lower().endswith(".png") else im.convert("RGBA")
-    if im.width > MAX_W:
-        im = im.resize((MAX_W, round(im.height * MAX_W / im.width)), Image.LANCZOS)
+    # les portraits n'ont pas besoin de 900 px de large : on allège nettement
+    target = 420 if portrait else MAX_W
+    if im.width > target:
+        im = im.resize((target, round(im.height * target / im.width)), Image.LANCZOS)
     buf = io.BytesIO()
     if "qr" in os.path.basename(path).lower():
         im.save(buf, format="PNG", optimize=True)
@@ -40,7 +42,7 @@ def main():
         if not os.path.exists(path):
             print(f"  … {name} : en attente")
             continue
-        mime, b64, size = encode(path)
+        mime, b64, size = encode(path, "portrait" in cls)
         pattern = re.compile(r'<(div|span) class="slot' + re.escape(cls) + r'" data-img="' + re.escape(name) + r'"' + re.escape(extra) + r'>.*?</(?:div|span)>', re.S)
         def _sub(m):
             tag = m.group(1)
