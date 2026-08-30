@@ -24,10 +24,17 @@ def encode(path, portrait=False):
     if im.width > target:
         im = im.resize((target, round(im.height * target / im.width)), Image.LANCZOS)
     buf = io.BytesIO()
-    if "qr" in os.path.basename(path).lower():
+    base = os.path.basename(path).lower()
+    # QR codes et logos gardent le PNG : la transparence doit survivre
+    if "qr" in base or "logo" in base:
         im.save(buf, format="PNG", optimize=True)
         mime = "image/png"
     else:
+        if im.mode in ("RGBA", "LA"):
+            # sans ce fond blanc, PIL aplatit la transparence sur du NOIR
+            fond = Image.new("RGB", im.size, (255, 255, 255))
+            fond.paste(im, mask=im.split()[-1])
+            im = fond
         im.convert("RGB").save(buf, format="JPEG", quality=JPEG_QUALITY, optimize=True, progressive=True)
         mime = "image/jpeg"
     return mime, base64.b64encode(buf.getvalue()).decode(), len(buf.getvalue())
