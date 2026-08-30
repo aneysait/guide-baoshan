@@ -20,7 +20,8 @@ def encode(path, portrait=False):
     if im.mode in ("RGBA", "P", "LA"):
         im = im.convert("RGB") if not path.lower().endswith(".png") else im.convert("RGBA")
     # les portraits n'ont pas besoin de 900 px de large : on allège nettement
-    target = 420 if portrait else MAX_W
+    # les apercus de documents servent aussi de vue agrandie : on les garde plus fins
+    target = 420 if portrait else (1300 if os.path.basename(path).startswith("apercu-") else MAX_W)
     if im.width > target:
         im = im.resize((target, round(im.height * target / im.width)), Image.LANCZOS)
     buf = io.BytesIO()
@@ -41,7 +42,7 @@ def encode(path, portrait=False):
 
 def main():
     html = open(HTML, encoding="utf-8").read()
-    slots = re.findall(r'<(?:div|span) class="slot([^"]*)" data-img="([^"]+)"([^>]*)>.*?</(?:div|span)>', html, re.S)
+    slots = re.findall(r'<(?:div|span|label) class="slot([^"]*)" data-img="([^"]+)"([^>]*)>.*?</(?:div|span|label)>', html, re.S)
     if not slots:
         print("aucun emplacement libre — tout est déjà rempli ?")
     filled = 0
@@ -51,7 +52,7 @@ def main():
             print(f"  … {name} : en attente")
             continue
         mime, b64, size = encode(path, "portrait" in cls)
-        pattern = re.compile(r'<(div|span) class="slot' + re.escape(cls) + r'" data-img="' + re.escape(name) + r'"' + re.escape(extra) + r'>.*?</(?:div|span)>', re.S)
+        pattern = re.compile(r'<(div|span|label) class="slot' + re.escape(cls) + r'" data-img="' + re.escape(name) + r'"' + re.escape(extra) + r'>.*?</(?:div|span|label)>', re.S)
         def _sub(m):
             tag = m.group(1)
             return (f'<{tag} class="slot{cls} filled" data-img="{name}"{extra}>'
