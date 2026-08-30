@@ -2,16 +2,18 @@
 """Remplit les emplacements photo du guide avec les fichiers de images/.
 
 Chaque emplacement est un <div class="slot" data-img="nom.jpg">. Si images/nom.jpg
-existe, il est redimensionné, recompressé et incrusté en base64 dans le HTML.
+existe, il est redimensionné, recompressé, écrit dans assets/ et référencé par une
+URL relative — pas de base64 : le lecteur ne télécharge que les images qu'il regarde.
 Relancer après chaque nouvel ajout dans images/ ; c'est idempotent.
 """
-import base64, io, os, re, sys
+import io, os, re, sys
 from PIL import Image
 Image.MAX_IMAGE_PIXELS = None   # les photos de téléphone dépassent la limite anti-bombe
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 HTML = os.path.join(ROOT, "guide-baoshan.html")
 IMGDIR = os.path.join(ROOT, "images")
+ASSETS = os.path.join(ROOT, "assets")
 MAX_W = 900           # largeur max : lisible à l'écran et correct à l'impression
 JPEG_QUALITY = 76
 
@@ -38,7 +40,7 @@ def encode(path, portrait=False):
             im = fond
         im.convert("RGB").save(buf, format="JPEG", quality=JPEG_QUALITY, optimize=True, progressive=True)
         mime = "image/jpeg"
-    return mime, base64.b64encode(buf.getvalue()).decode(), len(buf.getvalue())
+    return mime, buf.getvalue(), im.size
 
 def main():
     html = open(HTML, encoding="utf-8").read()
@@ -51,17 +53,24 @@ def main():
         if not os.path.exists(path):
             print(f"  … {name} : en attente")
             continue
-        mime, b64, size = encode(path, "portrait" in cls)
+        mime, data, (w, h) = encode(path, "portrait" in cls)
+        os.makedirs(ASSETS, exist_ok=True)
+        asset = os.path.splitext(name)[0] + (".png" if mime.endswith("png") else ".jpg")
+        open(os.path.join(ASSETS, asset), "wb").write(data)
         pattern = re.compile(r'<(div|span|label) class="slot' + re.escape(cls) + r'" data-img="' + re.escape(name) + r'"' + re.escape(extra) + r'>.*?</(?:div|span|label)>', re.S)
         def _sub(m):
             tag = m.group(1)
-            return (f'<{tag} class="slot{cls} filled" data-img="{name}"{extra}>'
-                    f'<img src="data:{mime};base64,{b64}" alt=""></{tag}>')
+            # « filled » ne doit être ajouté qu'une fois, sinon la classe enfle à chaque passage
+            klass = cls if " filled" in cls else cls + " filled"
+            return (f'<{tag} class="slot{klass}" data-img="{name}"{extra}>'
+                    f'<img src="assets/{asset}" loading="lazy" decoding="async" '
+                    f'width="{w}" height="{h}" alt=""></{tag}>')
         html = pattern.sub(_sub, html, count=1)
         filled += 1
-        print(f"  ✓ {name} : {size // 1024} Ko incrustés")
+        print(f"  ✓ {name} → assets/{asset} : {len(data) // 1024} Ko")
     open(HTML, "w", encoding="utf-8").write(html)
-    print(f"{filled} image(s) incrustée(s) · guide : {len(html) // 1024} Ko")
+    print(f"{filled} image(s) · guide : {len(html) // 1024} Ko · assets : "
+          f"{sum(os.path.getsize(os.path.join(ASSETS, f)) for f in os.listdir(ASSETS)) // 1024} Ko")
 
 if __name__ == "__main__":
     main()
