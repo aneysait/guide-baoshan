@@ -250,6 +250,8 @@
     font-family:var(--etroit);font-weight:700;font-size:7pt;letter-spacing:.04em;color:var(--encre);}
   .carte-cle .lot{display:inline-flex;gap:1.2mm;flex:none;margin-top:.2mm;}
   .credit{font-family:var(--etroit);font-size:8pt;letter-spacing:.05em;color:var(--encre-douce);margin-top:1.5mm;}
+  .carte-legende.large{grid-template-columns:1fr;gap:2.4mm;}
+  .carte-legende.large .adr{text-transform:none;letter-spacing:0;font-family:var(--corps);font-size:9.2pt;line-height:1.4;margin-top:.4mm;}
   .carte-legende .n{display:inline-flex;width:4.6mm;height:4.6mm;border-radius:50%;background:var(--rouge);color:#fff;font-family:var(--etroit);font-weight:700;font-size:8pt;align-items:center;justify-content:center;margin-right:2mm;flex:none;}
   .carte-legende div{display:flex;align-items:baseline;}
   .lexique td.fr{width:34%;}
@@ -1048,14 +1050,14 @@
     <figcaption style="font-family:var(--etroit);font-size:8.5pt;letter-spacing:.05em;color:var(--encre-douce);margin-top:1.5mm">Tap a number to open it in Gaode. Base map © OpenStreetMap contributors (ODbL).</figcaption>
   </figure>
 
-  <div class="carte-legende">
-    <div><span class="n">1</span><span>West gate <span class="cn">弘基广场</span><span class="adr">The food street, open 24/7 — <a href="#manger">food</a> · <strong>Perry&#39;s</strong>, <strong>TYT</strong> and the <strong>Xianpi</strong> taproom — <a href="#sortir">night</a> · the <strong>M+24H</strong> gym on F2 — <a href="#gyms">gyms</a> · a print shop</span></span></div>
-    <div><span class="n">2</span><span>Jufengyuan Rd <span class="cn">聚丰园路</span><span class="adr">Sit-down dinners, KTV and a cinema — <a href="#manger">food</a> · <strong>Metal Dog</strong> and <strong>Leke</strong>, both 24 h — <a href="#gyms">gyms</a></span></span></div>
-    <div><span class="n">3</span><span>Jufeng plaza <span class="cn">聚丰购物广场</span><span class="adr">205 Jufengyuan Rd · everyday shops and Sam&#39;s Club upstairs — <a href="#quotidien">daily life</a> · <strong>OM 24H</strong> on the third floor — <a href="#gyms">gyms</a></span></span></div>
-    <div><span class="n">4</span><span>Jinqiu Rd <span class="cn">锦秋新天地</span><span class="adr">Lianhua supermarket, fruit and the malatang <span class="cn">汆悦</span> — <a href="#manger">food</a> · <strong>Summer Gym</strong>, 70 m from metro exit 3 — <a href="#gyms">gyms</a></span></span></div>
-    <div><span class="n">5</span><span>Jingwei Hui <span class="cn">经纬汇</span><span class="adr">At Nanchen Rd metro. Basement food floor, <strong>Haidilao</strong> and Korean barbecue — <a href="#manger2">food</a> · <strong>Wanshou</strong> and three more bars — <a href="#sortir">night</a> · <strong>Leke</strong> and <strong>Fanqi</strong> — <a href="#gyms">gyms</a> · a cinema</span></span></div>
-    <div><span class="n">6</span><span>South gate street <span class="cn">芈城T3科创街</span><span class="adr">Straight out of the south gate: cafés, bubble tea, hotpot — <a href="#manger">food</a> · the <span class="cn">婧美图文</span> print shop — <a href="#quotidien2">services</a></span></span></div>
-    <div><span class="n">7</span><span>South gate gyms <span class="cn">琪航健身</span><span class="adr">670 Shangda Rd: <strong>Qihang</strong>, and <strong>Metal Dog</strong> next door, open round the clock — <a href="#gyms">gyms</a></span></span></div>
+  <div class="carte-legende large">
+    <div><span class="n">1</span><span><strong>West gate</strong> <span class="cn">弘基广场</span><span class="adr">The 24-hour food street, with Perry&#39;s, TYT and the Xianpi taproom above it, and the M+24H gym on the second floor.</span></span></div>
+    <div><span class="n">2</span><span><strong>Jufengyuan Rd</strong> <span class="cn">聚丰园路</span><span class="adr">Sit-down dinners, KTV and a cinema. Metal Dog and Leke, both open round the clock.</span></span></div>
+    <div><span class="n">3</span><span><strong>Jufeng plaza</strong> <span class="cn">聚丰购物广场</span><span class="adr">Everyday shops, Sam&#39;s Club upstairs, and the OM 24H gym on the third floor.</span></span></div>
+    <div><span class="n">4</span><span><strong>Jinqiu Rd</strong> <span class="cn">锦秋新天地</span><span class="adr">Lianhua supermarket, fruit stalls and the <span class="cn">汆悦</span> malatang — plus Summer Gym, 70 m from metro exit 3.</span></span></div>
+    <div><span class="n">5</span><span><strong>Jingwei Hui</strong> <span class="cn">经纬汇</span><span class="adr">One metro stop north. Food floor in the basement with Haidilao and Korean barbecue, Wanshou and three more bars, two gyms and a cinema.</span></span></div>
+    <div><span class="n">6</span><span><strong>South gate street</strong> <span class="cn">芈城T3科创街</span><span class="adr">Straight out of the south gate: cafés, bubble tea, hotpot, and a print shop.</span></span></div>
+    <div><span class="n">7</span><span><strong>South gate gyms</strong> <span class="cn">琪航健身</span><span class="adr">Qihang and Metal Dog, next door to each other on Shangda Rd and open round the clock.</span></span></div>
     <div><span style="display:inline-block;width:4.6mm;height:1.4mm;background:var(--or);margin-right:2mm;align-self:center;flex:none"></span><span style="font-family:var(--etroit);color:var(--encre-douce)">Line&nbsp;7 in orange · Line&nbsp;15 in brown</span></div>
   </div>
   <div class="credit"><strong>Deliberately not on this map:</strong> the phone shops and banks, which have <a href="#carte-sim-banque">their own map</a> with the door numbers you will need. The <a href="#carte-manger">food</a> and <a href="#carte-gyms">gym</a> maps show the same places in more detail; everything inside the gates is on <a href="#carte-campus">the campus map</a>.</div>
@@ -2109,7 +2111,7 @@
         <div class="lieu">
       <div class="nom">Metal Dog, south <span class="cn">金属狗健身</span><span class="badge gratuit">24 h</span><span class="badge verif">to be confirmed</span></div>
       <div class="meta">South gate, right beside Qihang on Shangda Rd</div>
-      <div class="desc">The second branch of the west-gate chain, and the only round-the-clock option on this side of campus. It sits next door to Qihang — pins&nbsp;6 and&nbsp;7 on <a href="#carte-gyms">the gyms map</a> — so one walk covers both. Gaode lists only the west-gate branch, so look for the sign.</div>
+      <div class="desc">The second branch of the west-gate chain, and the only round-the-clock option on this side of campus. It sits next door to Qihang — pins&nbsp;6 and&nbsp;7 on <a href="#carte-gyms">the gyms map</a> — so one walk covers both. Gaode lists only the west-gate branch, so look for the sign rather than the pin.</div>
     </div>
 <div class="lieu">
       <div class="nom">Leke <span class="cn">乐刻运动健身</span><span class="badge gratuit">24 h</span><a class="aller" href="https://uri.amap.com/search?keyword=%E4%B9%90%E5%88%BB%E8%BF%90%E5%8A%A8%E5%81%A5%E8%BA%AB%20%E5%AE%9D%E5%B1%B1%E7%BB%8F%E7%BA%AC%E6%B1%87&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">→ open in maps</a></div>
@@ -2160,7 +2162,7 @@
     <div><span class="n">3</span><span>Leke <span class="cn">乐刻运动健身</span> · <strong>24 h</strong><span class="adr">155 Jufengyuan Rd</span></span></div>
     <div><span class="n">4</span><span>M+24H <span class="cn">M+24H健身房</span> · <strong>24 h</strong><span class="adr">Hongji Plaza, F2 — right at the west gate · ¥48 a visit</span></span></div>
     <div><span class="n">5</span><span>Summer Gym <span class="cn">summer gym健身馆</span> · <strong>24 h</strong><span class="adr">Lane 809 Jinqiu Rd · 70 m from metro exit 3</span></span></div>
-    <div><span class="n">6</span><span>Metal Dog, south <span class="cn">金属狗健身</span> · <strong>24 h</strong><span class="adr">South gate, right beside Qihang <span class="badge verif">approximate</span></span></span></div>
+    <div><span class="n">6</span><span>Metal Dog, south <span class="cn">金属狗健身</span> · <strong>24 h</strong><span class="adr">South gate, right beside Qihang</span></span></div>
     <div><span class="n">7</span><span>Qihang Fitness <span class="cn">琪航健身</span> · <strong>09:00–22:00</strong><span class="adr">670 Shangda Rd · south gate</span></span></div>
     <div><span class="n">8</span><span>Leke <span class="cn">乐刻运动健身</span> · <strong>24 h</strong><span class="adr">Jingwei Hui, level B1</span></span></div>
     <div><span class="n">9</span><span>Fanqi Sports <span class="cn">梵齐体育健身</span> · <strong>10:00–22:00</strong><span class="adr">373 Weidi Rd</span></span></div>
