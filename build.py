@@ -57,6 +57,11 @@ PHONE_CSS = """
     width:100%!important;max-width:100%!important;}
   .lieu.pers .slot.portrait{width:26vw!important;max-width:26vw!important;flex:none;}
   .slot img{height:auto;object-fit:contain;}
+  /* Sur telephone la vignette occupe deja toute la largeur : agrandir ne sert que si
+     l'image remplit la hauteur et se fait balayer lateralement. */
+  .zoomer:checked + .doc-prev{width:auto!important;max-width:100vw!important;
+    overflow:auto;-webkit-overflow-scrolling:touch;justify-content:flex-start;}
+  .zoomer:checked + .doc-prev img{height:100%;width:auto;max-width:none;max-height:none;}
   .conseil,.panneau{font-size:15px;padding:14px 16px;}
   ul.liste li{margin-bottom:9px;}
   .sommaire li{font-size:19px;padding:12px 0;}
