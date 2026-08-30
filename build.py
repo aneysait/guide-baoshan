@@ -51,6 +51,7 @@ PHONE_CSS = """
   .lieu.resto .slot{width:100%;}
   .slot,.slot.large,.lieu .slot,.lieu.resto .slot{min-height:0;max-height:none;
     width:100%!important;max-width:100%!important;}
+  .lieu.pers .slot.portrait{width:26vw!important;max-width:26vw!important;flex:none;}
   .slot img{height:auto;object-fit:contain;}
   .conseil,.panneau{font-size:15px;padding:14px 16px;}
   ul.liste li{margin-bottom:9px;}
