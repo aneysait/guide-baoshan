@@ -63,6 +63,9 @@ PHONE_CSS = """
   .sommaire .sub{margin-left:0;font-size:12px;line-height:1.7;}
   .carte-legende{grid-template-columns:1fr;font-size:14px;gap:9px;}
   .grille-cartes{grid-template-columns:1fr 1fr;gap:18px 12px;}
+  .vignette .slot.vig{height:22vw;min-height:0;}
+  .vignette .slot.vig img{height:100%;object-fit:cover;}
+  .slot.illus{height:auto;aspect-ratio:16/9;}
   .vignette .t{font-size:15px;}
   .vignette .d{font-size:13px;}
   .panneau.afec{flex-direction:column;align-items:flex-start;gap:14px;}
