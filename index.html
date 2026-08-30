@@ -260,6 +260,10 @@
   .carte-legende.large .adr{text-transform:none;letter-spacing:0;font-family:var(--corps);font-size:9.2pt;line-height:1.4;margin-top:.4mm;}
   .carte-legende .n{display:inline-flex;width:4.6mm;height:4.6mm;border-radius:50%;background:var(--rouge);color:#fff;font-family:var(--etroit);font-weight:700;font-size:8pt;align-items:center;justify-content:center;margin-right:2mm;flex:none;}
   .carte-legende div{display:flex;align-items:baseline;}
+  .carte-legende a.leg{display:flex;align-items:baseline;flex:1;min-width:0;
+    color:inherit;text-decoration:none;}
+  .carte-legende.sb a.leg{align-items:flex-start;gap:2.6mm;}
+  .carte-legende a.leg:hover{color:var(--rouge-fonce);}
   .lexique td.fr{width:34%;}
   .lexique td.zh{width:30%;font-family:var(--hanzi);color:var(--rouge-fonce);}
   .lexique td.py{color:var(--encre-douce);font-style:italic;}
@@ -447,7 +451,7 @@
       <span class="note">Two campus stations on Line&nbsp;7: <strong>Shanghai University</strong> <span class="cn">上海大学站</span> (north gate) and <strong>Nanchen Road</strong> <span class="cn">南陈路站</span></span>
     </div>
     <div class="credit">Base map © OpenStreetMap contributors (ODbL).</div>
-    <figcaption class="carte-cap">Tap any pin, gate or label to open it in Gaode&nbsp;Maps.</figcaption>
+    <figcaption class="carte-cap">Tap any pin, gate or label — or any line in the list below — to open it in Gaode&nbsp;Maps.</figcaption>
   </figure>
 
   <div class="pied"><a href="#sommaire">UTSEUS · Baoshan Handbook</a><span class="num">04</span></div>
@@ -541,16 +545,16 @@
       <a class="pin vert" style="left:29.0%;top:83.8%;background:var(--vert)" href="https://uri.amap.com/marker?position=121.389507,31.310686&name=%E5%8D%97%E5%8C%BA%E5%90%BE%E9%A6%A8%E9%A3%9F%E5%A0%82&coordinate=gaode&callnative=1" target="_blank" rel="noopener">5</a>
       <a class="pin vert" style="left:73.9%;top:54.7%;background:var(--vert)" href="https://uri.amap.com/marker?position=121.398430,31.314829&name=%E4%B8%9C%E5%8C%BA%E7%95%99%E9%9F%B5%E9%A3%9F%E5%A0%82&coordinate=gaode&callnative=1" target="_blank" rel="noopener">6</a>
     </div>
-    <figcaption class="carte-cap">Tap any pin, gate or label to open it in Gaode&nbsp;Maps.</figcaption>
+    <figcaption class="carte-cap">Tap any pin, gate or label — or any line in the list below — to open it in Gaode&nbsp;Maps.</figcaption>
   </figure>
 
   <div class="carte-legende">
-    <div><span class="n vert">1</span><span>Yixin <span class="cn">益新</span><span class="adr">west of the library</span></span></div>
-    <div><span class="n vert">2</span><span>Ermei <span class="cn">尔美</span><span class="adr">north, by the sports fields</span></span></div>
-    <div><span class="n vert">3</span><span>Shanming <span class="cn">山明</span><span class="adr">facing buildings O/I · KFC</span></span></div>
-    <div><span class="n vert">4</span><span>Shuixiu <span class="cn">水秀</span><span class="adr">teaching zone</span></span></div>
-    <div><span class="n vert">5</span><span>Wuxin <span class="cn">吾馨</span><span class="adr">south, by the residences</span></span></div>
-    <div><span class="n vert">6</span><span>Liuyun <span class="cn">留韵</span><span class="adr">east zone · closest to UTSEUS</span></span></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%20%E7%9B%8A%E6%96%B0%E9%A4%90%E5%8E%85&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n vert">1</span><span>Yixin <span class="cn">益新</span><span class="adr">west of the library</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%20%E5%B0%94%E7%BE%8E%E9%A3%9F%E5%A0%82&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n vert">2</span><span>Ermei <span class="cn">尔美</span><span class="adr">north, by the sports fields</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%20%E5%B1%B1%E6%98%8E%E9%A4%90%E5%8E%85&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n vert">3</span><span>Shanming <span class="cn">山明</span><span class="adr">facing buildings O/I · KFC</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%20%E6%B0%B4%E7%A7%80%E6%A5%BC&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n vert">4</span><span>Shuixiu <span class="cn">水秀</span><span class="adr">teaching zone</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.389507,31.310686&name=%E5%8D%97%E5%8C%BA%E5%90%BE%E9%A6%A8%E9%A3%9F%E5%A0%82&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n vert">5</span><span>Wuxin <span class="cn">吾馨</span><span class="adr">south, by the residences</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.398430,31.314829&name=%E4%B8%9C%E5%8C%BA%E7%95%99%E9%9F%B5%E9%A3%9F%E5%A0%82&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n vert">6</span><span>Liuyun <span class="cn">留韵</span><span class="adr">east zone · closest to UTSEUS</span></span></a></div>
   </div>
   <div class="carte-cle">
     <div><span class="lot"><span class="gate">N</span><span class="gate">S</span></span><span><strong>Dark squares — the gates.</strong> <strong>N</strong> north, where the metro is · <strong>E</strong> and <strong>E2</strong> east, on the Nanchen Rd side · <strong>S</strong> and <strong>S2</strong> south. The <span style="color:var(--rouge-fonce)"><strong>west gate</strong></span> is labelled in red instead: it is the food street, and the one you will use most.</span></div>
@@ -933,23 +937,23 @@
       <a class="pin" style="left:12.24%;top:94.46%" href="https://uri.amap.com/marker?position=121.388249,31.312703&name=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E9%AB%98%E5%B0%94%E5%A4%AB%E7%BB%83%E4%B9%A0%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener">14</a>
     </div>
     <div class="carte-cap">Sports facilities only — the full campus, with the gates and the canteens, is on <a href="#carte-campus">the campus map</a>. Background © OpenStreetMap contributors.</div>
-    <figcaption class="carte-cap">Tap any pin, gate or label to open it in Gaode&nbsp;Maps.</figcaption>
+    <figcaption class="carte-cap">Tap any pin, gate or label — or any line in the list below — to open it in Gaode&nbsp;Maps.</figcaption>
   </figure>
   <div class="carte-legende">
-    <div><span class="n">1</span><span>Gymnasium <span class="cn">体育馆</span><span class="adr">Badminton, in practice — 15 courts, and the busiest booking on campus</span></span></div>
-    <div><span class="n">2</span><span>Training hall <span class="cn">训练馆</span><span class="adr">32 table-tennis tables · volleyball and basketball on the second floor</span></span></div>
-    <div><span class="n">3</span><span>Swimming pool <span class="cn">游泳馆</span><span class="adr">Shallow half open to all · cap compulsory</span></span></div>
-    <div><span class="n">4</span><span>West athletics track <span class="cn">田径场</span><span class="adr">400 m, a football pitch inside, and the street-workout bars alongside</span></span></div>
-    <div><span class="n">5</span><span>East athletics track <span class="cn">田径场</span><span class="adr">The same again, with its own pitch — usually the quieter of the two</span></span></div>
-    <div><span class="n">6</span><span>Covered court <span class="cn">风雨操场</span><span class="adr">Basketball, volleyball and a climbing wall, all under cover</span></span></div>
-    <div><span class="n">7</span><span>North basketball courts <span class="cn">篮球场</span><span class="adr">Open air, right by the tracks</span></span></div>
-    <div><span class="n">8</span><span>E-zone tennis <span class="cn">E区网球场</span><span class="adr">Twelve outdoor courts in the north-west corner</span></span></div>
-    <div><span class="n">9</span><span>West courts<span class="adr">Tennis and basketball along the western wall — the quiet end of campus</span></span></div>
-    <div><span class="n">10</span><span>H-zone basketball <span class="cn">H区篮球场</span><span class="adr">The closest courts to the west gate</span></span></div>
-    <div><span class="n">11</span><span>Football, J zone <span class="cn">足球场</span><span class="adr">The one games are actually played on, not the two inside the tracks</span></span></div>
-    <div><span class="n">12</span><span>Baseball diamond <span class="cn">棒球场</span><span class="adr">Between the football pitches and the J-zone courts</span></span></div>
-    <div><span class="n">13</span><span>J-zone basketball <span class="cn">J区篮球场</span><span class="adr">Ten courts, and more street-workout bars</span></span></div>
-    <div><span class="n">14</span><span>Golf practice <span class="cn">高尔夫</span><span class="adr">The far south-west corner, below the football pitches</span></span></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.395355,31.319530&name=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E4%BD%93%E8%82%B2%E9%A6%86&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">1</span><span>Gymnasium <span class="cn">体育馆</span><span class="adr">Badminton, in practice — 15 courts, and the busiest booking on campus</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.394637,31.319640&name=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E8%AE%AD%E7%BB%83%E9%A6%86&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">2</span><span>Training hall <span class="cn">训练馆</span><span class="adr">32 table-tennis tables · volleyball and basketball on the second floor</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.394055,31.319459&name=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E6%B8%B8%E6%B3%B3%E9%A6%86&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">3</span><span>Swimming pool <span class="cn">游泳馆</span><span class="adr">Shallow half open to all · cap compulsory</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.393155,31.319068&name=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E8%A5%BF%E7%94%B0%E5%BE%84%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">4</span><span>West athletics track <span class="cn">田径场</span><span class="adr">400 m, a football pitch inside, and the street-workout bars alongside</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.396626,31.319310&name=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E4%B8%9C%E7%94%B0%E5%BE%84%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">5</span><span>East athletics track <span class="cn">田径场</span><span class="adr">The same again, with its own pitch — usually the quieter of the two</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.392084,31.319798&name=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E9%A3%8E%E9%9B%A8%E6%93%8D%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">6</span><span>Covered court <span class="cn">风雨操场</span><span class="adr">Basketball, volleyball and a climbing wall, all under cover</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.392355,31.319198&name=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E5%8C%97%E7%AF%AE%E7%90%83%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">7</span><span>North basketball courts <span class="cn">篮球场</span><span class="adr">Open air, right by the tracks</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.387849,31.318875&name=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6E%E5%8C%BA%E7%BD%91%E7%90%83%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">8</span><span>E-zone tennis <span class="cn">E区网球场</span><span class="adr">Twelve outdoor courts in the north-west corner</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.387780,31.317494&name=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E8%A5%BF%E4%BE%A7%E7%90%83%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">9</span><span>West courts<span class="adr">Tennis and basketball along the western wall — the quiet end of campus</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.388160,31.315094&name=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6H%E5%8C%BA%E7%AF%AE%E7%90%83%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">10</span><span>H-zone basketball <span class="cn">H区篮球场</span><span class="adr">The closest courts to the west gate</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.388360,31.313713&name=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6J%E5%8C%BA%E8%B6%B3%E7%90%83%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">11</span><span>Football, J zone <span class="cn">足球场</span><span class="adr">The one games are actually played on, not the two inside the tracks</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.389301,31.313614&name=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E6%A3%92%E7%90%83%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">12</span><span>Baseball diamond <span class="cn">棒球场</span><span class="adr">Between the football pitches and the J-zone courts</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.389501,31.313064&name=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6J%E5%8C%BA%E7%AF%AE%E7%90%83%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">13</span><span>J-zone basketball <span class="cn">J区篮球场</span><span class="adr">Ten courts, and more street-workout bars</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.388249,31.312703&name=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E9%AB%98%E5%B0%94%E5%A4%AB%E7%BB%83%E4%B9%A0%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">14</span><span>Golf practice <span class="cn">高尔夫</span><span class="adr">The far south-west corner, below the football pitches</span></span></a></div>
   </div>
   <div class="pied"><a href="#sommaire">UTSEUS · Baoshan Handbook</a><span class="num">19</span></div>
 </section>
@@ -1023,17 +1027,17 @@
       <a class="pin" style="left:50.0%;top:67.3%" href="https://uri.amap.com/marker?position=121.395825,31.310725&name=%E7%90%AA%E8%88%AA%E5%81%A5%E8%BA%AB%28%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%29&coordinate=gaode&callnative=1" target="_blank" rel="noopener">7</a>
     </div>
     <figcaption style="font-family:var(--etroit);font-size:8.5pt;letter-spacing:.05em;color:var(--encre-douce);margin-top:1.5mm">Base map © OpenStreetMap contributors (ODbL).</figcaption>
-    <figcaption class="carte-cap">Tap any pin, gate or label to open it in Gaode&nbsp;Maps.</figcaption>
+    <figcaption class="carte-cap">Tap any pin, gate or label — or any line in the list below — to open it in Gaode&nbsp;Maps.</figcaption>
   </figure>
 
   <div class="carte-legende large">
-    <div><span class="n">1</span><span><strong>West gate</strong> <span class="cn">弘基广场</span><span class="adr">The 24-hour food street, with Perry&#39;s, TYT and the Xianpi taproom above it, and the M+24H gym on the second floor.</span></span></div>
-    <div><span class="n">2</span><span><strong>Jufengyuan Rd</strong> <span class="cn">聚丰园路</span><span class="adr">Sit-down dinners, KTV and a cinema. Metal Dog and Leke, both open round the clock.</span></span></div>
-    <div><span class="n">3</span><span><strong>Jufeng plaza</strong> <span class="cn">聚丰购物广场</span><span class="adr">Everyday shops, Sam&#39;s Club upstairs, and the OM 24H gym on the third floor.</span></span></div>
-    <div><span class="n">4</span><span><strong>Jinqiu Rd</strong> <span class="cn">锦秋新天地</span><span class="adr">Lianhua supermarket, fruit stalls and the <span class="cn">汆悦</span> malatang — plus Summer Gym, 70 m from metro exit 3.</span></span></div>
-    <div><span class="n">5</span><span><strong>Jingwei Hui</strong> <span class="cn">经纬汇</span><span class="adr">One metro stop north. Food floor in the basement with Haidilao and Korean barbecue, Wanshou and three more bars, two gyms and a cinema.</span></span></div>
-    <div><span class="n">6</span><span><strong>South gate street</strong> <span class="cn">芈城T3科创街</span><span class="adr">Straight out of the south gate: cafés, bubble tea, hotpot, and a print shop.</span></span></div>
-    <div><span class="n">7</span><span><strong>South gate gyms</strong> <span class="cn">琪航健身</span><span class="adr">Qihang and Metal Dog, next door to each other on Shangda Rd and open round the clock.</span></span></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.386424,31.315582&name=%E5%BC%98%E5%9F%BA%E5%B9%BF%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">1</span><span><strong>West gate</strong> <span class="cn">弘基广场</span><span class="adr">The 24-hour food street, with Perry&#39;s, TYT and the Xianpi taproom above it, and the M+24H gym on the second floor.</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E8%81%9A%E4%B8%B0%E5%9B%AD%E8%B7%AF&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n">2</span><span><strong>Jufengyuan Rd</strong> <span class="cn">聚丰园路</span><span class="adr">Sit-down dinners, KTV and a cinema. Metal Dog and Leke, both open round the clock.</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E5%B1%B1%E5%A7%86%E4%BC%9A%E5%91%98%E5%95%86%E5%BA%97%20%E8%81%9A%E4%B8%B0%E5%9B%AD%E8%B7%AF&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n">3</span><span><strong>Jufeng plaza</strong> <span class="cn">聚丰购物广场</span><span class="adr">Everyday shops, Sam&#39;s Club upstairs, and the OM 24H gym on the third floor.</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E8%81%94%E5%8D%8E%E8%B6%85%E5%B8%82%20%E9%94%A6%E7%A7%8B&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n">4</span><span><strong>Jinqiu Rd</strong> <span class="cn">锦秋新天地</span><span class="adr">Lianhua supermarket, fruit stalls and the <span class="cn">汆悦</span> malatang — plus Summer Gym, 70 m from metro exit 3.</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E7%BB%8F%E7%BA%AC%E6%B1%87&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n">5</span><span><strong>Jingwei Hui</strong> <span class="cn">经纬汇</span><span class="adr">One metro stop north. Food floor in the basement with Haidilao and Korean barbecue, Wanshou and three more bars, two gyms and a cinema.</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E8%8A%88%E5%9F%8ET3%E7%A7%91%E5%88%9B%E8%A1%97&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n">6</span><span><strong>South gate street</strong> <span class="cn">芈城T3科创街</span><span class="adr">Straight out of the south gate: cafés, bubble tea, hotpot, and a print shop.</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.395825,31.310725&name=%E7%90%AA%E8%88%AA%E5%81%A5%E8%BA%AB%28%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%29&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">7</span><span><strong>South gate gyms</strong> <span class="cn">琪航健身</span><span class="adr">Qihang and Metal Dog, next door to each other on Shangda Rd and open round the clock.</span></span></a></div>
     <div><span style="display:inline-block;width:4.6mm;height:1.4mm;background:var(--or);margin-right:2mm;align-self:center;flex:none"></span><span style="font-family:var(--etroit);color:var(--encre-douce)">Line&nbsp;7 in orange · Line&nbsp;15 in brown</span></div>
   </div>
   <div class="credit"><strong>Deliberately not on this map:</strong> the phone shops and banks, which have <a href="#carte-sim-banque">their own map</a> with the door numbers you will need. The <a href="#carte-manger">food</a> and <a href="#carte-gyms">gym</a> maps show the same places in more detail; everything inside the gates is on <a href="#carte-campus">the campus map</a>.</div>
@@ -1812,50 +1816,26 @@
 <g transform="translate(966,26)"><path d="M0 40 L0 8" stroke="#5C544E" stroke-width="1.8"/><path d="M-5.5 15 L0 3 L5.5 15 Z" fill="#5C544E"/><text class="cap" x="0" y="55" text-anchor="middle" style="fill:#5C544E">N</text></g>
 <text class="cap" x="992" y="672" text-anchor="end" style="font-size:10px">Map data © OpenStreetMap contributors</text>
 </svg>
-    <figcaption class="carte-cap">Tap any pin to open it in Gaode Maps.</figcaption>
+    <figcaption class="carte-cap">Tap any pin, or any line in the list below, to open it in Gaode&nbsp;Maps.</figcaption>
   </figure>
 
   <div class="carte-legende sb">
-    <div>
-      <span class="n sim">1</span>
-      <span><strong>China Unicom</strong> <span class="cn">中国联通</span>
-        <span class="adr">155 Jufengyuan Rd · 5 min</span></span>
-    </div>
-    <div>
-      <span class="n sim">2</span>
-      <span><strong>China Telecom</strong> <span class="cn">中国电信</span>
-        <span class="adr">329 Jufengyuan Rd · 10 min</span></span>
-    </div>
-    <div>
-      <span class="n sim">3</span>
-      <span><strong>China Mobile</strong> <span class="cn">中国移动</span>
-        <span class="adr">189 Jufengyuan Rd · 15 min</span></span>
-    </div>
-    <div>
-      <span class="n">4</span>
-      <span><strong>Bank of China</strong> <span class="cn">中国银行</span>
-        <span class="adr">165 Jufengyuan Rd · 5 min · SHU partner</span></span>
-    </div>
-    <div>
-      <span class="n">5</span>
-      <span><strong>China Construction Bank</strong> <span class="cn">中国建设银行</span>
-        <span class="adr">809 Jinqiu Rd · 10 min</span></span>
-    </div>
-    <div>
-      <span class="n">6</span>
-      <span><strong>ICBC</strong> <span class="cn">中国工商银行</span>
-        <span class="adr">458 Jufengyuan Rd · 15 min</span></span>
-    </div>
-    <div>
-      <span class="n">7</span>
-      <span><strong>Agricultural Bank of China</strong> <span class="cn">中国农业银行</span>
-        <span class="adr">716 Jinqiu Rd · 20 min</span></span>
-    </div>
-    <div>
-      <span class="n" style="background:var(--encre)">·</span>
-      <span><strong>West gate</strong> <span class="cn">西门</span>
-        <span class="adr">Your starting point for every walk above</span></span>
-    </div>
+    <div><a class="leg" href="https://m.amap.com/detail/index/poiid=B0FFG42F4M&amp;src=uriapi" target="_blank" rel="noopener"><span class="n sim">1</span><span><strong>China Unicom</strong> <span class="cn">中国联通</span>
+        <span class="adr">155 Jufengyuan Rd · 5 min</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E4%B8%AD%E5%9B%BD%E7%94%B5%E4%BF%A1%20%E8%81%9A%E4%B8%B0%E5%9B%AD%E8%B7%AF&amp;city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n sim">2</span><span><strong>China Telecom</strong> <span class="cn">中国电信</span>
+        <span class="adr">329 Jufengyuan Rd · 10 min</span></span></a></div>
+    <div><a class="leg" href="https://m.amap.com/detail/index/poiid=B0IGCXJ9TP&amp;src=uriapi" target="_blank" rel="noopener"><span class="n sim">3</span><span><strong>China Mobile</strong> <span class="cn">中国移动</span>
+        <span class="adr">189 Jufengyuan Rd · 15 min</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E4%B8%AD%E5%9B%BD%E9%93%B6%E8%A1%8C%E7%A5%81%E8%BF%9E%E5%B1%B1%E8%B7%AF%E6%94%AF%E8%A1%8C&amp;city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n">4</span><span><strong>Bank of China</strong> <span class="cn">中国银行</span>
+        <span class="adr">165 Jufengyuan Rd · 5 min · SHU partner</span></span></a></div>
+    <div><a class="leg" href="https://m.amap.com/detail/index/poiid=B001571A5P&amp;src=uriapi" target="_blank" rel="noopener"><span class="n">5</span><span><strong>China Construction Bank</strong> <span class="cn">中国建设银行</span>
+        <span class="adr">809 Jinqiu Rd · 10 min</span></span></a></div>
+    <div><a class="leg" href="https://m.amap.com/detail/index/poiid=B0G0V1N0NX&amp;src=uriapi" target="_blank" rel="noopener"><span class="n">6</span><span><strong>ICBC</strong> <span class="cn">中国工商银行</span>
+        <span class="adr">458 Jufengyuan Rd · 15 min</span></span></a></div>
+    <div><a class="leg" href="https://m.amap.com/detail/index/poiid=B0015118D0&amp;src=uriapi" target="_blank" rel="noopener"><span class="n">7</span><span><strong>Agricultural Bank of China</strong> <span class="cn">中国农业银行</span>
+        <span class="adr">716 Jinqiu Rd · 20 min</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.386424,31.315582&name=%E5%BC%98%E5%9F%BA%E5%B9%BF%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">·</span><span><strong>West gate</strong> <span class="cn">西门</span>
+        <span class="adr">Your starting point for every walk above</span></span></a></div>
   </div>
 
   <div class="conseil"><b>One trip does both:</b> Unicom (155) and Bank of China (165) are near neighbours on Jufengyuan Rd, so you can get your SIM card and open your account on the same walk — exactly the order <a href="#sim">the SIM</a> and <a href="#banque">bank chapters</a> recommend.</div>
@@ -1942,14 +1922,14 @@
       <a class="pin vert" style="left:87.3%;top:17.2%" href="https://uri.amap.com/search?keyword=%E7%BB%8F%E7%BA%AC%E6%B1%87&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">5</a>
     </div>
     <div class="carte-cap">Canteens inside the gates are on <a href="#carte-campus">the campus map</a>. Delivery reaches all of this in 30–45 minutes — <a href="#manger2">the delivery section</a>. Base map © OpenStreetMap contributors (ODbL).</div>
-    <figcaption class="carte-cap">Tap any pin, gate or label to open it in Gaode&nbsp;Maps.</figcaption>
+    <figcaption class="carte-cap">Tap any pin, gate or label — or any line in the list below — to open it in Gaode&nbsp;Maps.</figcaption>
   </figure>
   <div class="carte-legende">
-    <div><span class="n vert">1</span><span>The west gate <span class="cn">弘基广场</span><span class="adr">Street food, skewers, bubble tea, Korean · 07:00–24:00</span></span></div>
-    <div><span class="n vert">2</span><span>Jufengyuan Rd <span class="cn">聚丰园路</span><span class="adr">The strip west of Hongji: sit-down dinners, KTV, cinema</span></span></div>
-    <div><span class="n vert">3</span><span>Jinqiu Rd <span class="cn">锦秋新天地</span><span class="adr">By metro exit 3: Lianhua, fruit, and the malatang <span class="cn">汆悦</span></span></span></div>
-    <div><span class="n vert">4</span><span>South gate street <span class="cn">芈城T3科创街</span><span class="adr">Cafés, bubble tea, hotpot · 10:00–22:00 · closest to the classrooms</span></span></div>
-    <div><span class="n vert">5</span><span>Jingwei Hui <span class="cn">经纬汇</span><span class="adr">Basement food floor, Haidilao and Korean barbecue · one metro stop</span></span></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.386424,31.315582&name=%E5%BC%98%E5%9F%BA%E5%B9%BF%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n vert">1</span><span>The west gate <span class="cn">弘基广场</span><span class="adr">Street food, skewers, bubble tea, Korean · 07:00–24:00</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E8%81%9A%E4%B8%B0%E5%9B%AD%E8%B7%AF&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n vert">2</span><span>Jufengyuan Rd <span class="cn">聚丰园路</span><span class="adr">The strip west of Hongji: sit-down dinners, KTV, cinema</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E9%94%A6%E7%A7%8B%E8%B7%AF%20%E5%A4%A7%E5%9C%BA%E9%95%87&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n vert">3</span><span>Jinqiu Rd <span class="cn">锦秋新天地</span><span class="adr">By metro exit 3: Lianhua, fruit, and the malatang <span class="cn">汆悦</span></span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E8%8A%88%E5%9F%8ET3%E7%A7%91%E5%88%9B%E8%A1%97&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n vert">4</span><span>South gate street <span class="cn">芈城T3科创街</span><span class="adr">Cafés, bubble tea, hotpot · 10:00–22:00 · closest to the classrooms</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E7%BB%8F%E7%BA%AC%E6%B1%87&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n vert">5</span><span>Jingwei Hui <span class="cn">经纬汇</span><span class="adr">Basement food floor, Haidilao and Korean barbecue · one metro stop</span></span></a></div>
   </div>
   <div class="pied"><a href="#sommaire">UTSEUS · Baoshan Handbook</a><span class="num">27</span></div>
 </section>
@@ -2136,18 +2116,18 @@
       <a class="pin" style="left:76.9%;top:7.1%" href="https://uri.amap.com/search?keyword=%E6%A2%B5%E9%BD%90%E4%BD%93%E8%82%B2%E5%81%A5%E8%BA%AB%20%E7%BB%8F%E7%BA%AC&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">9</a>
       </div>
     <div class="carte-cap">Five of the seven never close. The campus gymnasium and pool are inside the gates and cost a fraction of any of these — <a href="#sport">chapter&nbsp;VII</a>. Addresses, phone numbers and prices are on <a href="#gyms">the previous page</a>. Base map © OpenStreetMap contributors (ODbL).</div>
-    <figcaption class="carte-cap">Tap any pin, gate or label to open it in Gaode&nbsp;Maps.</figcaption>
+    <figcaption class="carte-cap">Tap any pin, gate or label — or any line in the list below — to open it in Gaode&nbsp;Maps.</figcaption>
   </figure>
   <div class="carte-legende">
-    <div><span class="n">1</span><span>OM 24H <span class="cn">OM健身24小时</span> · <strong>24 h</strong><span class="adr">3F, Jufeng plaza, 205 Jufengyuan Rd</span></span></div>
-    <div><span class="n">2</span><span>Metal Dog <span class="cn">金属狗健身</span> · <strong>24 h</strong><span class="adr">Qilianshan Rd × Jufengyuan Rd, 200 m east</span></span></div>
-    <div><span class="n">3</span><span>Leke <span class="cn">乐刻运动健身</span> · <strong>24 h</strong><span class="adr">155 Jufengyuan Rd</span></span></div>
-    <div><span class="n">4</span><span>M+24H <span class="cn">M+24H健身房</span> · <strong>24 h</strong><span class="adr">Hongji Plaza, F2 — right at the west gate · ¥48 a visit</span></span></div>
-    <div><span class="n">5</span><span>Summer Gym <span class="cn">summer gym健身馆</span> · <strong>24 h</strong><span class="adr">Lane 809 Jinqiu Rd · 70 m from metro exit 3</span></span></div>
-    <div><span class="n">6</span><span>Metal Dog, south <span class="cn">金属狗健身</span> · <strong>24 h</strong><span class="adr">South gate, right beside Qihang</span></span></div>
-    <div><span class="n">7</span><span>Qihang Fitness <span class="cn">琪航健身</span> · <strong>09:00–22:00</strong><span class="adr">670 Shangda Rd · south gate</span></span></div>
-    <div><span class="n">8</span><span>Leke <span class="cn">乐刻运动健身</span> · <strong>24 h</strong><span class="adr">Jingwei Hui, level B1</span></span></div>
-    <div><span class="n">9</span><span>Fanqi Sports <span class="cn">梵齐体育健身</span> · <strong>10:00–22:00</strong><span class="adr">373 Weidi Rd</span></span></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=OM%E5%81%A5%E8%BA%AB24%E5%B0%8F%E6%97%B6%20%E8%81%9A%E4%B8%B0%E8%B4%AD%E7%89%A9%E5%B9%BF%E5%9C%BA&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n">1</span><span>OM 24H <span class="cn">OM健身24小时</span> · <strong>24 h</strong><span class="adr">3F, Jufeng plaza, 205 Jufengyuan Rd</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E9%87%91%E5%B1%9E%E7%8B%97%E5%81%A5%E8%BA%AB%20%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E5%AE%9D%E5%B1%B1%E6%A0%A1%E5%8C%BA&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n">2</span><span>Metal Dog <span class="cn">金属狗健身</span> · <strong>24 h</strong><span class="adr">Qilianshan Rd × Jufengyuan Rd, 200 m east</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E4%B9%90%E5%88%BB%E8%BF%90%E5%8A%A8%E5%81%A5%E8%BA%AB%20%E8%81%9A%E4%B8%B0%E5%9B%AD&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n">3</span><span>Leke <span class="cn">乐刻运动健身</span> · <strong>24 h</strong><span class="adr">155 Jufengyuan Rd</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.386424,31.315582&name=M%2B24H%E5%81%A5%E8%BA%AB%E6%88%BF&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">4</span><span>M+24H <span class="cn">M+24H健身房</span> · <strong>24 h</strong><span class="adr">Hongji Plaza, F2 — right at the west gate · ¥48 a visit</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=summer%20gym%E5%81%A5%E8%BA%AB%E9%A6%86%20%E9%94%A6%E7%A7%8B%E8%B7%AF&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n">5</span><span>Summer Gym <span class="cn">summer gym健身馆</span> · <strong>24 h</strong><span class="adr">Lane 809 Jinqiu Rd · 70 m from metro exit 3</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.394675,31.310971&name=%E9%87%91%E5%B1%9E%E7%8B%97%E5%81%A5%E8%BA%AB&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">6</span><span>Metal Dog, south <span class="cn">金属狗健身</span> · <strong>24 h</strong><span class="adr">South gate, right beside Qihang</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E7%90%AA%E8%88%AA%E5%81%A5%E8%BA%AB%20%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n">7</span><span>Qihang Fitness <span class="cn">琪航健身</span> · <strong>09:00–22:00</strong><span class="adr">670 Shangda Rd · south gate</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E4%B9%90%E5%88%BB%E8%BF%90%E5%8A%A8%E5%81%A5%E8%BA%AB%20%E5%AE%9D%E5%B1%B1%E7%BB%8F%E7%BA%AC%E6%B1%87&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n">8</span><span>Leke <span class="cn">乐刻运动健身</span> · <strong>24 h</strong><span class="adr">Jingwei Hui, level B1</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/search?keyword=%E6%A2%B5%E9%BD%90%E4%BD%93%E8%82%B2%E5%81%A5%E8%BA%AB%20%E7%BB%8F%E7%BA%AC&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener"><span class="n">9</span><span>Fanqi Sports <span class="cn">梵齐体育健身</span> · <strong>10:00–22:00</strong><span class="adr">373 Weidi Rd</span></span></a></div>
   </div>
   <div class="pied"><a href="#sommaire">UTSEUS · Baoshan Handbook</a><span class="num">31</span></div>
 </section>
@@ -2426,19 +2406,19 @@
       <a class="pin" style="left:94.0%;top:16.7%" href="https://uri.amap.com/marker?position=121.506943,31.303979&name=%E4%BA%94%E8%A7%92%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener">10</a>
     </div>
     <div class="carte-cap">Distances are deceptive: the campus sits well north of everything else, so allow 45 minutes to an hour to reach the river. Details for each place are on <a href="#voir">the previous page</a> and in <a href="#ligne7">the Line&nbsp;7 chapter</a>. Metro lines drawn from OpenStreetMap. Base map © OpenStreetMap contributors (ODbL).</div>
-    <figcaption class="carte-cap">Tap any pin, gate or label to open it in Gaode&nbsp;Maps.</figcaption>
+    <figcaption class="carte-cap">Tap any pin, gate or label — or any line in the list below — to open it in Gaode&nbsp;Maps.</figcaption>
   </figure>
   <div class="carte-legende">
-    <div><span class="n">1</span><span>Jing&#39;an Temple <span class="cn">静安寺</span><span class="adr">Line&nbsp;7 direct · 28 min</span></span></div>
-    <div><span class="n">2</span><span>Wukang Rd &amp; the Concession <span class="cn">武康路</span><span class="adr">Line&nbsp;7 direct to Changshu Rd</span></span></div>
-    <div><span class="n">3</span><span>M50 &amp; Suzhou Creek <span class="cn">M50创意园</span><span class="adr">Changshou Rd, then L13 · ~35 min</span></span></div>
-    <div><span class="n">4</span><span>Jade Buddha Temple <span class="cn">玉佛寺</span><span class="adr">L13 Jiangning Rd · 20 RMB + 10</span></span></div>
-    <div><span class="n">5</span><span>Natural History Museum <span class="cn">上海自然博物馆</span><span class="adr">L13 · 30 RMB, 12 with a student card</span></span></div>
-    <div><span class="n">6</span><span>Nanjing Road <span class="cn">南京路</span><span class="adr">L2 East Nanjing Rd · walk it to the river</span></span></div>
-    <div><span class="n">7</span><span>The Bund <span class="cn">外滩</span><span class="adr">The far end of Nanjing Rd · lights off at 23:00</span></span></div>
-    <div><span class="n">8</span><span>Shanghai Tower <span class="cn">上海中心</span><span class="adr">L2 Lujiazui · 180 RMB, or a free bar upstairs</span></span></div>
-    <div><span class="n">9</span><span>Tianzifang <span class="cn">田子坊</span><span class="adr">L9 Dapuqiao · lanes of shops and cafés</span></span></div>
-    <div><span class="n">10</span><span>Wujiaochang &amp; Daxue Rd <span class="cn">五角场 · 大学路</span><span class="adr">Didi ~40–50 RMB · the other student quarter</span></span></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.445320,31.223505&name=%E9%9D%99%E5%AE%89%E5%AF%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">1</span><span>Jing&#39;an Temple <span class="cn">静安寺</span><span class="adr">Line&nbsp;7 direct · 28 min</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.438278,31.204430&name=%E6%AD%A6%E5%BA%B7%E5%A4%A7%E6%A5%BC&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">2</span><span>Wukang Rd &amp; the Concession <span class="cn">武康路</span><span class="adr">Line&nbsp;7 direct to Changshu Rd</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.449361,31.248101&name=%E4%B8%8A%E6%B5%B7M50%E5%88%9B%E6%84%8F%E5%9B%AD&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">3</span><span>M50 &amp; Suzhou Creek <span class="cn">M50创意园</span><span class="adr">Changshou Rd, then L13 · ~35 min</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.445125,31.241445&name=%E7%8E%89%E4%BD%9B%E7%A6%85%E5%AF%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">4</span><span>Jade Buddha Temple <span class="cn">玉佛寺</span><span class="adr">L13 Jiangning Rd · 20 RMB + 10</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.462672,31.235021&name=%E4%B8%8A%E6%B5%B7%E8%87%AA%E7%84%B6%E5%8D%9A%E7%89%A9%E9%A6%86&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">5</span><span>Natural History Museum <span class="cn">上海自然博物馆</span><span class="adr">L13 · 30 RMB, 12 with a student card</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.479494,31.235983&name=%E5%8D%97%E4%BA%AC%E8%B7%AF%E6%AD%A5%E8%A1%8C%E8%A1%97&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">6</span><span>Nanjing Road <span class="cn">南京路</span><span class="adr">L2 East Nanjing Rd · walk it to the river</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.492127,31.233516&name=%E5%A4%96%E6%BB%A9&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">7</span><span>The Bund <span class="cn">外滩</span><span class="adr">The far end of Nanjing Rd · lights off at 23:00</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.505366,31.233510&name=%E4%B8%8A%E6%B5%B7%E4%B8%AD%E5%BF%83%E5%A4%A7%E5%8E%A6&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">8</span><span>Shanghai Tower <span class="cn">上海中心</span><span class="adr">L2 Lujiazui · 180 RMB, or a free bar upstairs</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.468662,31.208197&name=%E4%B8%8A%E6%B5%B7%E7%94%B0%E5%AD%90%E5%9D%8A&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">9</span><span>Tianzifang <span class="cn">田子坊</span><span class="adr">L9 Dapuqiao · lanes of shops and cafés</span></span></a></div>
+    <div><a class="leg" href="https://uri.amap.com/marker?position=121.506943,31.303979&name=%E4%BA%94%E8%A7%92%E5%9C%BA&coordinate=gaode&callnative=1" target="_blank" rel="noopener"><span class="n">10</span><span>Wujiaochang &amp; Daxue Rd <span class="cn">五角场 · 大学路</span><span class="adr">Didi ~40–50 RMB · the other student quarter</span></span></a></div>
     <div style="grid-column:1/-1;display:flex;flex-wrap:wrap;gap:1.6mm 5mm;align-items:center;margin-top:1.4mm;font-family:var(--etroit);font-size:8.6pt;color:var(--encre-douce)"><span style="display:inline-flex;align-items:center;gap:1.6mm"><span style="display:inline-block;width:7mm;height:1.6mm;border-radius:.8mm;background:#F0A500"></span><strong>Line&nbsp;7</strong> your line</span><span style="display:inline-flex;align-items:center;gap:1.6mm"><span style="display:inline-block;width:7mm;height:1.6mm;border-radius:.8mm;background:#5AA832"></span><strong>Line&nbsp;2</strong> the Bund, Lujiazui</span><span style="display:inline-flex;align-items:center;gap:1.6mm"><span style="display:inline-block;width:7mm;height:1.6mm;border-radius:.8mm;background:#E77BB0"></span><strong>Line&nbsp;13</strong> temple, museum, M50</span><span style="display:inline-flex;align-items:center;gap:1.6mm"><span style="display:inline-block;width:7mm;height:1.6mm;border-radius:.8mm;background:#7BAFD4"></span><strong>Line&nbsp;9</strong> Tianzifang</span><span style="display:inline-flex;align-items:center;gap:1.6mm"><span style="display:inline-block;width:7mm;height:1.6mm;border-radius:.8mm;background:#C2A5CF"></span><strong>Line&nbsp;10</strong> Wujiaochang</span></div>
   </div>
   <div class="pied"><a href="#sommaire">UTSEUS · Baoshan Handbook</a><span class="num">38</span></div>

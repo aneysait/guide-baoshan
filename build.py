@@ -39,7 +39,11 @@ PHONE_CSS = """
   .couv-sous{font-size:16px;max-width:none;}
   .vertical{display:none;}
   .pied{position:static;margin-top:22px;padding-top:10px;border-top:.3mm solid var(--filet);}
-  .pied .num{display:none;}
+  /* Le numero de page reste utile en lecture continue : « regarde page 13 » doit
+     vouloir dire quelque chose sur telephone aussi. */
+  .pied .num{display:inline;}
+  .pied .num::before{content:"page ";font-weight:400;letter-spacing:.18em;
+    color:var(--encre-douce);}
   h1.chapitre{font-size:31px;}
   h2.bloc{font-size:15px;margin-top:26px;}
   .sur-titre{font-size:11px;}
