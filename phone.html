@@ -355,8 +355,18 @@
   .legende{font-size:14px;}
   /* maps and diagrams keep their labels legible by scrolling sideways */
   .scroll-x{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -18px;padding:0 18px;}
-  .scroll-x .carte-wrap,.scroll-x figure,.scroll-x svg{min-width:660px;}
-  .scroll-x .carte-wrap{width:660px;}
+  /* Les schemas vectoriels gardent le defilement lateral : leur texte est dans le SVG
+     et retrecirait avec le dessin. */
+  .scroll-x figure,.scroll-x svg{min-width:660px;}
+  /* Les cartes matricielles tiennent dans l'ecran : pastilles et etiquettes sont du HTML
+     dimensionne en mm, elles restent lisibles quelle que soit la taille du fond. */
+  .scroll-x .carte-wrap{width:100%;min-width:0;}
+  .carte-wrap .mlab{font-size:8px;padding:1px 3px;}
+  .carte-wrap .pin{width:17px;height:17px;font-size:10px;}
+  .carte-wrap .gate,.carte-wrap .lib{min-width:15px;height:15px;font-size:9px;}
+  .carte-wrap .mdot{width:9px;height:9px;}
+  .swipe{font-family:var(--etroit);font-size:12px;letter-spacing:.05em;
+    color:var(--encre-douce);margin-top:5px;}
   .horaires{font-size:13px;}
   .credit,.carte-cap,figcaption{font-size:12px!important;}
 </style>
@@ -1072,7 +1082,7 @@
       <a class="pin" style="left:53.9%;top:68.1%" href="https://uri.amap.com/search?keyword=%E8%8A%88%E5%9F%8ET3%E7%A7%91%E5%88%9B%E8%A1%97&city=%E4%B8%8A%E6%B5%B7" target="_blank" rel="noopener">6</a>
       <a class="pin" style="left:50.0%;top:67.3%" href="https://uri.amap.com/marker?position=121.395825,31.310725&name=%E7%90%AA%E8%88%AA%E5%81%A5%E8%BA%AB%28%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%29&coordinate=gaode&callnative=1" target="_blank" rel="noopener">7</a>
     </div></div>
-    <figcaption style="font-family:var(--etroit);font-size:8.5pt;letter-spacing:.05em;color:var(--encre-douce);margin-top:1.5mm">Tap a number to open it in Gaode. Base map © OpenStreetMap contributors (ODbL).</figcaption>
+    <figcaption style="font-family:var(--etroit);font-size:8.5pt;letter-spacing:.05em;color:var(--encre-douce);margin-top:1.5mm">Base map © OpenStreetMap contributors (ODbL).</figcaption>
     <figcaption class="carte-cap">Tap any pin, gate or label to open it in Gaode&nbsp;Maps.</figcaption>
   </figure>
 
@@ -1861,7 +1871,7 @@
 <g><rect x="30" y="40" width="63.0" height="6" fill="#5C544E"/><rect x="93.0" y="40" width="63.0" height="6" fill="#fff" stroke="#5C544E" stroke-width="1"/><text class="cap" x="30" y="34">0</text><text class="cap" x="156" y="34" text-anchor="middle">200 m</text></g>
 <g transform="translate(966,26)"><path d="M0 40 L0 8" stroke="#5C544E" stroke-width="1.8"/><path d="M-5.5 15 L0 3 L5.5 15 Z" fill="#5C544E"/><text class="cap" x="0" y="55" text-anchor="middle" style="fill:#5C544E">N</text></g>
 <text class="cap" x="992" y="672" text-anchor="end" style="font-size:10px">Map data © OpenStreetMap contributors</text>
-</svg></div>
+</svg></div><div class="swipe">Swipe the diagram sideways to see the whole of it.</div>
     <figcaption class="carte-cap">Tap any pin to open it in Gaode Maps.</figcaption>
   </figure>
 
@@ -2373,7 +2383,7 @@
       <rect x="20" y="168" width="740" height="36" rx="3" fill="var(--panneau-rose)"/>
       <text x="34" y="183" style="font-family:var(--etroit);font-weight:700;font-size:11.5px;fill:var(--rouge-fonce)">LAST TRAIN TOWARDS MEILAN LAKE 美兰湖方向</text>
       <text x="34" y="198" style="font-family:var(--etroit);font-size:11px;fill:var(--encre)">≈ 23:00 Sunday to Thursday from Jing'an Temple · extended to ~00:30 on Friday and Saturday · after that, a 60–100 RMB Didi to share</text>
-    </svg></div>
+    </svg></div><div class="swipe">Swipe the diagram sideways to see the whole of it.</div>
     <figcaption style="font-family:var(--etroit);font-size:8.5pt;letter-spacing:.05em;color:var(--encre-douce)">Simplified diagram — intermediate stations omitted (···). Exact times in Gaode or the Metro 大都会 app.</figcaption>
   </figure>
 
