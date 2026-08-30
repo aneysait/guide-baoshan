@@ -7,6 +7,7 @@ Relancer après chaque nouvel ajout dans images/ ; c'est idempotent.
 """
 import base64, io, os, re, sys
 from PIL import Image
+Image.MAX_IMAGE_PIXELS = None   # les photos de téléphone dépassent la limite anti-bombe
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 HTML = os.path.join(ROOT, "guide-baoshan.html")
