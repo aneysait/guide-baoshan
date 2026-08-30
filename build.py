@@ -57,6 +57,9 @@ PHONE_CSS = """
   .sommaire li{font-size:19px;padding:12px 0;}
   .sommaire .sub{margin-left:0;font-size:12px;line-height:1.7;}
   .carte-legende{grid-template-columns:1fr;font-size:14px;gap:9px;}
+  .grille-cartes{grid-template-columns:1fr 1fr;gap:18px 12px;}
+  .vignette .t{font-size:15px;}
+  .vignette .d{font-size:13px;}
   .panneau.afec{flex-direction:column;align-items:flex-start;gap:14px;}
   .panneau.afec .afec-qr{align-self:center;}
   .slot.qr{width:34mm!important;height:34mm!important;max-width:none!important;}
