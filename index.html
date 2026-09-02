@@ -141,6 +141,10 @@
   .slot.filled{background:none;border:0;padding:0;}
   .slot{overflow:hidden;}
   .slot.portrait{aspect-ratio:3/4;min-height:0;}
+  .lieu.app{display:flex;gap:3mm;align-items:flex-start;}
+  .lieu.app .txt{flex:1;min-width:0;}
+  .lieu.app .slot.logo{flex:none;width:13mm;height:13mm;min-height:0;margin:0;padding:1mm;}
+  .lieu.app .slot.logo img{width:100%;height:100%;object-fit:contain;}
   .lieu.pers{display:flex;gap:4mm;align-items:flex-start;}
   .lieu.pers .txt{flex:1;min-width:0;}
   .lieu.pers .slot.portrait{flex:none;width:24mm;margin:0;}
@@ -538,18 +542,59 @@
     <li><strong>Keep the passwords somewhere offline.</strong> A password manager that syncs through a blocked service is its own trap.</li>
   </ul>
 
-  <h2 class="bloc">What people here actually pay for</h2>
-  <div class="lieu">
-    <div class="nom">Astrill <span class="badge prix">~15 USD a month, yearly</span></div>
-    <div class="meta">The expensive one · ask their support about the student rate</div>
-    <div class="desc">The long-standing default among people who need it to work every single day: its stealth mode is built for the deep-packet inspection that catches ordinary VPNs. It costs several times what a normal VPN does, and that is the whole argument for it.</div>
+  <h2 class="bloc">What people here actually use</h2>
+  <div class="grille-2">
+    <div class="lieu app">
+      <span class="slot logo" data-img="logo-astrill.png">logo</span>
+      <div class="txt">
+        <div class="nom">Astrill</div>
+        <div class="meta">The one that works on the bad days · ~30 USD a month · ~15 on a year · ~12.50 on two</div>
+        <div class="desc">Its stealth mode is built for the deep-packet inspection that catches ordinary VPNs. Several times the price of anything else, and that is the whole argument. Write to their support and ask for the student rate.</div>
+      </div>
+    </div>
+    <div class="lieu app">
+      <span class="slot logo" data-img="logo-surfshark.png">logo</span>
+      <div class="txt">
+        <div class="nom">Surfshark</div>
+        <div class="meta">Cheap, and it holds up · 16.45 USD a month · 3.39 on a year · 2.49 on two</div>
+        <div class="desc">The best value of the big names. Turn on the setting they call <strong>NoBorders</strong> before you fly. Watch the renewal: the headline price is for the first term, after that it is nearer 79 USD a year.</div>
+      </div>
+    </div>
+    <div class="lieu app">
+      <span class="slot logo" data-img="logo-mullvad.png">logo</span>
+      <div class="txt">
+        <div class="nom">Mullvad</div>
+        <div class="meta">One price, no games · 5 EUR a month, whatever you buy</div>
+        <div class="desc">No tiers, no introductory rate, no renewal jump — it has charged the same since 2009, and 10&nbsp;% less if you pay in crypto. Turn on <strong>bridges</strong> for China.</div>
+      </div>
+    </div>
+    <div class="lieu app">
+      <span class="slot logo" data-img="logo-sakuracat.png">logo</span>
+      <div class="txt">
+        <div class="nom">SakuraCat</div>
+        <div class="meta">Built for this market · from ~0.3 RMB a day · free tier to test</div>
+        <div class="desc">A Chinese-market service rather than a Western one: sold by the day or as data packs that do not expire, with a free tier you can try before committing. Pays in RMB, which is easier once you are here.</div>
+      </div>
+    </div>
+    <div class="lieu app">
+      <span class="slot logo" data-img="logo-clash.png">logo</span>
+      <div class="txt">
+        <div class="nom">Clash</div>
+        <div class="meta">An app, not a service · free · Windows, macOS, Linux</div>
+        <div class="desc">Open source, and the desktop client most people here run. On its own it does nothing: it needs a subscription to feed it nodes.</div>
+      </div>
+    </div>
+    <div class="lieu app">
+      <span class="slot logo" data-img="logo-shadowrocket.png">logo</span>
+      <div class="txt">
+        <div class="nom">Shadowrocket</div>
+        <div class="meta">The same idea, on iPhone · 2.99 USD once, on the App&nbsp;Store</div>
+        <div class="desc">Same story: a client, not a service. Buy it <strong>before you arrive</strong> — it is not in the Chinese App Store, so you need an Apple ID from home.</div>
+      </div>
+    </div>
   </div>
-  <div class="lieu">
-    <div class="nom">The cheaper ones</div>
-    <div class="meta">ExpressVPN · Surfshark · NordVPN and similar</div>
-    <div class="desc">A fraction of the price and they work most of the time, which for most people is enough. Whatever your provider calls <strong>obfuscation</strong> or <strong>stealth mode</strong>, switch it on before you fly: the default settings are the ones the firewall is best at spotting.</div>
-  </div>
-  <div class="conseil"><b>Two things the year above you may tell you.</b> That <b>LetsVPN</b> is the cheap answer — it was for years, but it is reported to have stopped serving the mainland in 2026 <span class="badge verif">to be confirmed</span>. And that a travel eSIM makes a VPN unnecessary: it does not — but it is a genuinely useful spare, and it has <a href="#esim">its own chapter</a> in part two.</div>
+  <div class="conseil"><b>Clash and Shadowrocket are apps, not subscriptions.</b> They are the window; somebody still has to sell you the view. The subscription that feeds them is bought separately — locally these are called <span class="cn">机场</span> — so buying the app alone gets you nothing. Ask the year above you which one they are on, because that is knowledge that does not survive being written down.</div>
+  <div class="conseil"><b>Do not arrive with these.</b> <b>ExpressVPN</b> and <b>NordVPN</b> are the two names that do not work here, and students turn up with them every single year. <b>LetsVPN</b> was the cheap favourite for a long time and <b>shut down in April 2026</b>. Whatever you choose, buy it and sign into it at home.</div>
   <div class="pied"><a href="#sommaire">UTSEUS · Baoshan Handbook</a><span class="num">07</span></div>
 </section>
 
