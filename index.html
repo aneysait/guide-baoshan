@@ -141,6 +141,12 @@
   .slot.filled{background:none;border:0;padding:0;}
   .slot{overflow:hidden;}
   .slot.portrait{aspect-ratio:3/4;min-height:0;}
+  .evites{display:flex;gap:3mm;align-items:center;margin-top:2.5mm;}
+  .evites .slot.logo{width:10mm;height:10mm;min-height:0;margin:0;padding:0;
+    filter:grayscale(1);opacity:.42;}
+  .evites .slot.logo img{width:100%;height:100%;object-fit:contain;}
+  .evites-txt{font-family:var(--etroit);font-size:8pt;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--rouge-fonce);}
   .lieu.app{display:flex;gap:3mm;align-items:flex-start;}
   .lieu.app .txt{flex:1;min-width:0;}
   .lieu.app .slot.logo{flex:none;width:13mm;height:13mm;min-height:0;margin:0;padding:1mm;}
@@ -545,7 +551,7 @@
   <h2 class="bloc">What people here actually use</h2>
   <div class="grille-2">
     <div class="lieu app">
-      <span class="slot logo" data-img="logo-astrill.png">logo</span>
+      <span class="slot logo filled" data-img="logo-astrill.png"><img src="assets/logo-astrill.png" loading="lazy" decoding="async" width="256" height="256" alt=""></span>
       <div class="txt">
         <div class="nom">Astrill</div>
         <div class="meta">The one that works on the bad days · ~30 USD a month · ~15 on a year · ~12.50 on two</div>
@@ -553,7 +559,7 @@
       </div>
     </div>
     <div class="lieu app">
-      <span class="slot logo" data-img="logo-surfshark.png">logo</span>
+      <span class="slot logo filled" data-img="logo-surfshark.png"><img src="assets/logo-surfshark.png" loading="lazy" decoding="async" width="256" height="256" alt=""></span>
       <div class="txt">
         <div class="nom">Surfshark</div>
         <div class="meta">Cheap, and it holds up · 16.45 USD a month · 3.39 on a year · 2.49 on two</div>
@@ -561,7 +567,7 @@
       </div>
     </div>
     <div class="lieu app">
-      <span class="slot logo" data-img="logo-mullvad.png">logo</span>
+      <span class="slot logo filled" data-img="logo-mullvad.png"><img src="assets/logo-mullvad.png" loading="lazy" decoding="async" width="256" height="256" alt=""></span>
       <div class="txt">
         <div class="nom">Mullvad</div>
         <div class="meta">One price, no games · 5 EUR a month, whatever you buy</div>
@@ -569,7 +575,7 @@
       </div>
     </div>
     <div class="lieu app">
-      <span class="slot logo" data-img="logo-sakuracat.png">logo</span>
+      <span class="slot logo filled" data-img="logo-sakuracat.png"><img src="assets/logo-sakuracat.png" loading="lazy" decoding="async" width="225" height="225" alt=""></span>
       <div class="txt">
         <div class="nom">SakuraCat</div>
         <div class="meta">Built for this market · from ~0.3 RMB a day · free tier to test</div>
@@ -577,7 +583,7 @@
       </div>
     </div>
     <div class="lieu app">
-      <span class="slot logo" data-img="logo-clash.png">logo</span>
+      <span class="slot logo filled" data-img="logo-clash.png"><img src="assets/logo-clash.png" loading="lazy" decoding="async" width="256" height="256" alt=""></span>
       <div class="txt">
         <div class="nom">Clash</div>
         <div class="meta">An app, not a service · free · Windows, macOS, Linux</div>
@@ -594,7 +600,13 @@
     </div>
   </div>
   <div class="conseil"><b>Clash and Shadowrocket are apps, not subscriptions.</b> They are the window; somebody still has to sell you the view. The subscription that feeds them is bought separately — locally these are called <span class="cn">机场</span> — so buying the app alone gets you nothing. Ask the year above you which one they are on, because that is knowledge that does not survive being written down.</div>
-  <div class="conseil"><b>Do not arrive with these.</b> <b>ExpressVPN</b> and <b>NordVPN</b> are the two names that do not work here, and students turn up with them every single year. <b>LetsVPN</b> was the cheap favourite for a long time and <b>shut down in April 2026</b>. Whatever you choose, buy it and sign into it at home.</div>
+  <div class="conseil"><b>Do not arrive with these.</b> <b>ExpressVPN</b> and <b>NordVPN</b> are the two names that do not work here, and students turn up with them every single year. <b>LetsVPN</b> was the cheap favourite for a long time and <b>shut down in April 2026</b>. Whatever you choose, buy it and sign into it at home.
+    <div class="evites">
+      <span class="slot logo filled" data-img="logo-expressvpn.png"><img src="assets/logo-expressvpn.png" loading="lazy" decoding="async" width="256" height="256" alt=""></span>
+      <span class="slot logo filled" data-img="logo-nordvpn.png"><img src="assets/logo-nordvpn.png" loading="lazy" decoding="async" width="256" height="256" alt=""></span>
+      <span class="slot logo filled" data-img="logo-letsvpn.png"><img src="assets/logo-letsvpn.png" loading="lazy" decoding="async" width="256" height="256" alt=""></span>
+      <span class="evites-txt">not these</span>
+    </div></div>
   <div class="pied"><a href="#sommaire">UTSEUS · Baoshan Handbook</a><span class="num">07</span></div>
 </section>
 
