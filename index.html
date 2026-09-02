@@ -141,15 +141,21 @@
   .slot.filled{background:none;border:0;padding:0;}
   .slot{overflow:hidden;}
   .slot.portrait{aspect-ratio:3/4;min-height:0;}
-  .evites{display:flex;gap:3mm;align-items:center;margin-top:2.5mm;}
-  .evites .slot.logo{width:10mm;height:10mm;min-height:0;margin:0;padding:0;
-    filter:grayscale(1);opacity:.42;}
-  .evites .slot.logo img{width:100%;height:100%;object-fit:contain;}
-  .evites-txt{font-family:var(--etroit);font-size:8pt;letter-spacing:.16em;
-    text-transform:uppercase;color:var(--rouge-fonce);}
+  .evites{display:flex;gap:7mm;align-items:flex-start;margin-top:3.5mm;flex-wrap:wrap;}
+  .evite{position:relative;display:flex;flex-direction:column;align-items:center;gap:1.6mm;width:19mm;}
+  .evite .slot.logo{width:19mm;height:19mm;min-height:0;margin:0;padding:0;
+    filter:grayscale(1);opacity:.4;}
+  .evite .slot.logo img{width:100%;height:100%;object-fit:contain;}
+  .evite .croix{position:absolute;left:0;top:0;width:19mm;height:19mm;pointer-events:none;}
+  .evite .croix::before,.evite .croix::after{content:"";position:absolute;top:50%;left:4%;
+    width:92%;height:1.1mm;background:var(--rouge);border-radius:.6mm;opacity:.85;}
+  .evite .croix::before{transform:rotate(45deg);}
+  .evite .croix::after{transform:rotate(-45deg);}
+  .evite .etiq{font-family:var(--etroit);font-weight:700;font-size:8.5pt;letter-spacing:.04em;
+    color:var(--rouge-fonce);text-align:center;}
   .lieu.app{display:flex;gap:3mm;align-items:flex-start;}
   .lieu.app .txt{flex:1;min-width:0;}
-  .lieu.app .slot.logo{flex:none;width:13mm;height:13mm;min-height:0;margin:0;padding:1mm;}
+  .lieu.app .slot.logo{flex:none;width:16mm;height:16mm;min-height:0;margin:0;padding:0;}
   .lieu.app .slot.logo img{width:100%;height:100%;object-fit:contain;}
   .lieu.pers{display:flex;gap:4mm;align-items:flex-start;}
   .lieu.pers .txt{flex:1;min-width:0;}
@@ -582,30 +588,12 @@
         <div class="desc">A Chinese-market service rather than a Western one: sold by the day or as data packs that do not expire, with a free tier you can try before committing. Pays in RMB, which is easier once you are here.</div>
       </div>
     </div>
-    <div class="lieu app">
-      <span class="slot logo filled" data-img="logo-clash.png"><img src="assets/logo-clash.png" loading="lazy" decoding="async" width="256" height="256" alt=""></span>
-      <div class="txt">
-        <div class="nom">Clash</div>
-        <div class="meta">An app, not a service · free · Windows, macOS, Linux</div>
-        <div class="desc">Open source, and the desktop client most people here run. On its own it does nothing: it needs a subscription to feed it nodes.</div>
-      </div>
-    </div>
-    <div class="lieu app">
-      <span class="slot logo filled" data-img="logo-shadowrocket.png"><img src="assets/logo-shadowrocket.png" loading="lazy" decoding="async" width="256" height="256" alt=""></span>
-      <div class="txt">
-        <div class="nom">Shadowrocket</div>
-        <div class="meta">The same idea, on iPhone · 2.99 USD once, on the App&nbsp;Store</div>
-        <div class="desc">Same story: a client, not a service. Buy it <strong>before you arrive</strong> — it is not in the Chinese App Store, so you need an Apple ID from home.</div>
-      </div>
-    </div>
   </div>
-  <div class="conseil"><b>Clash and Shadowrocket are apps, not subscriptions.</b> They are the window; somebody still has to sell you the view. The subscription that feeds them is bought separately — locally these are called <span class="cn">机场</span> — so buying the app alone gets you nothing. Ask the year above you which one they are on, because that is knowledge that does not survive being written down.</div>
-  <div class="conseil"><b>Do not arrive with these.</b> <b>ExpressVPN</b> and <b>NordVPN</b> are the two names that do not work here, and students turn up with them every single year. <b>LetsVPN</b> was the cheap favourite for a long time and <b>shut down in April 2026</b>. Whatever you choose, buy it and sign into it at home.
+  <div class="conseil"><b>Do not arrive with these.</b> The two names most people already have do not work here, and the old cheap favourite is gone: <b>LetsVPN shut down in April 2026</b>.
     <div class="evites">
-      <span class="slot logo filled" data-img="logo-expressvpn.png"><img src="assets/logo-expressvpn.png" loading="lazy" decoding="async" width="256" height="256" alt=""></span>
-      <span class="slot logo filled" data-img="logo-nordvpn.png"><img src="assets/logo-nordvpn.png" loading="lazy" decoding="async" width="256" height="256" alt=""></span>
-      <span class="slot logo filled" data-img="logo-letsvpn.png"><img src="assets/logo-letsvpn.png" loading="lazy" decoding="async" width="256" height="256" alt=""></span>
-      <span class="evites-txt">not these</span>
+      <div class="evite"><span class="slot logo filled" data-img="logo-expressvpn.png"><img src="assets/logo-expressvpn.png" loading="lazy" decoding="async" width="256" height="256" alt=""></span><span class="croix"></span><span class="etiq">ExpressVPN</span></div>
+      <div class="evite"><span class="slot logo filled" data-img="logo-nordvpn.png"><img src="assets/logo-nordvpn.png" loading="lazy" decoding="async" width="256" height="256" alt=""></span><span class="croix"></span><span class="etiq">NordVPN</span></div>
+      <div class="evite"><span class="slot logo filled" data-img="logo-letsvpn.png"><img src="assets/logo-letsvpn.png" loading="lazy" decoding="async" width="256" height="256" alt=""></span><span class="croix"></span><span class="etiq">LetsVPN</span></div>
     </div></div>
   <div class="pied"><a href="#sommaire">UTSEUS · Baoshan Handbook</a><span class="num">07</span></div>
 </section>
