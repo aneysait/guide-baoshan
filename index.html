@@ -118,9 +118,11 @@
     break-inside:avoid;
   }
   .lieu .nom{font-weight:700;font-size:10.5pt;}
+  .lieu.app .nom{font-size:13pt;letter-spacing:.005em;}
   .lieu .nom .cn{color:var(--rouge-fonce);font-weight:500;margin-left:1.5mm;}
   .lieu .meta{font-family:var(--etroit);font-size:9pt;letter-spacing:.06em;color:var(--encre-douce);text-transform:uppercase;margin:.6mm 0;}
   .lieu .desc{font-size:9.8pt;}
+  .lieu.app .desc{font-size:10.2pt;}
   .lieu .desc em{font-style:normal;color:var(--encre-douce);font-size:9.2pt;}
   .badge{
     display:inline-block;font-family:var(--etroit);font-weight:700;font-size:8pt;
@@ -141,8 +143,10 @@
   .slot.filled{background:none;border:0;padding:0;}
   .slot{overflow:hidden;}
   .slot.portrait{aspect-ratio:3/4;min-height:0;}
-  .tarif{display:flex;align-items:baseline;gap:1.6mm;margin:1.6mm 0 .6mm 0;}
-  .tarif .gros{font-family:var(--etroit);font-weight:700;font-size:13.5pt;
+  .tarif{display:flex;align-items:baseline;gap:1.6mm;margin:1.6mm 0 .6mm 0;flex-wrap:wrap;}
+  .tarif .gros{white-space:nowrap;}
+  .tarif .unite{flex:1;min-width:0;}
+  .tarif .gros{font-family:var(--etroit);font-weight:700;font-size:17pt;
     letter-spacing:.01em;color:var(--rouge);line-height:1;}
   .tarif .unite{font-family:var(--etroit);font-size:8.6pt;letter-spacing:.04em;
     text-transform:uppercase;color:var(--encre-douce);}
@@ -160,9 +164,9 @@
   .evite .croix::after{transform:rotate(-45deg);}
   .evite .etiq{font-family:var(--etroit);font-weight:700;font-size:8.5pt;letter-spacing:.04em;
     color:var(--rouge-fonce);text-align:center;}
-  .lieu.app{display:flex;gap:3mm;align-items:flex-start;}
+  .lieu.app{display:flex;gap:4mm;align-items:flex-start;padding-top:3mm;padding-bottom:3mm;}
   .lieu.app .txt{flex:1;min-width:0;}
-  .lieu.app .slot.logo{flex:none;width:16mm;height:16mm;min-height:0;margin:0;padding:0;}
+  .lieu.app .slot.logo{flex:none;width:21mm;height:21mm;min-height:0;margin:0;padding:0;}
   .lieu.app .slot.logo img{width:100%;height:100%;object-fit:contain;}
   .lieu.pers{display:flex;gap:4mm;align-items:flex-start;}
   .lieu.pers .txt{flex:1;min-width:0;}
@@ -190,14 +194,14 @@
     font-variant-numeric:tabular-nums;}
   .horaires td.f{font-weight:700;color:var(--rouge-fonce);}
   .horaires td.none{color:#B3ABA4;}
-  .esims td{white-space:normal;vertical-align:top;padding-top:1.2mm;padding-bottom:1.2mm;}
+  .esims td{white-space:normal;vertical-align:middle;padding-top:2.4mm;padding-bottom:2.4mm;font-size:9.6pt;}
   .esims td.q,.esims td.p{white-space:nowrap;}
-  .esims td.p{font-weight:700;color:var(--rouge);}
+  .esims td.p{font-weight:700;color:var(--rouge);font-family:var(--etroit);font-size:13pt;}
   .esims td.p .dev{display:block;font-weight:400;font-size:7.6pt;color:var(--encre-douce);}
-  .esims .slot.logo{display:inline-flex;width:9mm;height:9mm;min-height:0;
-    margin:0 1.8mm 0 0;padding:0;vertical-align:middle;}
+  .esims .slot.logo{display:inline-flex;width:14mm;height:14mm;min-height:0;
+    margin:0 2.4mm 0 0;padding:0;vertical-align:middle;}
   .esims .slot.logo img{width:100%;height:100%;object-fit:contain;}
-  .esims td.f{white-space:nowrap;}
+  .esims td.f{white-space:nowrap;font-size:11.5pt;}
   .panneau.afec{display:flex;gap:5mm;align-items:center;}
   .panneau.afec .afec-txt{flex:1;min-width:0;}
   .panneau.afec .afec-qr{flex:none;text-align:center;}
@@ -559,15 +563,11 @@
   <h1 class="chapitre">Sort your VPN<br><span class="rouge">before you fly</span></h1>
   <p class="chapo">This is the one item on the whole list you cannot fix once you have landed. Do it at home, on your phone <em>and</em> your laptop, and open it once before you leave.</p>
 
-  <h2 class="bloc">Why it has to be first</h2>
-  <p>From inside China, <strong>Google, Gmail, Instagram, WhatsApp, Facebook, YouTube</strong> and most Western news do not load, and neither do a good number of the academic sites your coursework will send you to. Everything this guide points you at — WeChat, Alipay, Taobao, Amap, Dianping — works normally.</p>
-  <p><strong>You cannot download a VPN once you are here.</strong> The providers&#39; own sites are blocked and the Chinese app stores do not carry them. Landing without one means landing with no Gmail, no Instagram, and no simple way to tell your family you arrived.</p>
+  <p><strong>You cannot download a VPN once you are here</strong> — the providers&#39; sites are blocked and the Chinese app stores do not carry them. From inside China, Google, Gmail, Instagram, WhatsApp and most Western news simply do not load.</p>
   <ul class="liste">
-    <li><strong>Install it, pay for it, and sign in once — at home.</strong> An account you have never opened is not much use from behind the wall.</li>
-    <li><strong>Both devices.</strong> Phone and laptop. The laptop matters more than you expect in the first week.</li>
-    <li><strong>Take two, from two different companies.</strong> Providers go down for days at a time, usually around big political dates. A second subscription is the difference between an annoying afternoon and a fortnight offline.</li>
+    <li><strong>Install it, pay for it and sign in once, at home.</strong> Phone and laptop both.</li>
+    <li><strong>Take two, from two different companies.</strong> Providers go down for days at a time.</li>
   </ul>
-
   <h2 class="bloc">What people here actually use</h2>
   <div class="grille-2">
     <div class="lieu app">
@@ -576,7 +576,7 @@
         <div class="nom">Astrill</div>
         <div class="tarif"><span class="gros">≈200 RMB</span><span class="unite">a month, no commitment</span></div>
         <div class="tarif-plus">30 USD a month · about 1,000 RMB for a five-month semester</div>
-        <div class="desc">Its stealth mode is built for the deep-packet inspection that catches ordinary VPNs. Several times the price of anything else, and that is the whole argument for it.</div>
+        <div class="desc">Stealth mode built for the deep-packet inspection that catches ordinary VPNs. Several times the price, and that is the argument.</div>
       </div>
     </div>
     <div class="lieu app">
@@ -585,7 +585,7 @@
         <div class="nom">Surfshark</div>
         <div class="tarif"><span class="gros">≈110 RMB</span><span class="unite">a month, no commitment</span></div>
         <div class="tarif-plus">16.45 USD a month · about 550 RMB for the semester — its 12-month plan works out cheaper, near 270 RMB in total</div>
-        <div class="desc">The best value of the big names. Turn on the setting they call <strong>NoBorders</strong> before you fly. Watch the renewal: the headline price is for the first term, after that it is nearer 79 USD a year.</div>
+        <div class="desc">The best value of the big names. Turn on <strong>NoBorders</strong> before you fly.</div>
       </div>
     </div>
     <div class="lieu app">
@@ -594,7 +594,7 @@
         <div class="nom">Mullvad</div>
         <div class="tarif"><span class="gros">≈39 RMB</span><span class="unite">a month, flat</span></div>
         <div class="tarif-plus">5 EUR a month, cancel whenever · about 195 RMB for the semester</div>
-        <div class="desc">No tiers, no introductory rate, no renewal jump: it has charged the same since 2009, and you can stop after one month. Turn on <strong>bridges</strong> for China.</div>
+        <div class="desc">Same price since 2009, and you can stop after one month. Turn on <strong>bridges</strong> for China.</div>
       </div>
     </div>
     <div class="lieu app">
@@ -603,7 +603,7 @@
         <div class="nom">SakuraCat</div>
         <div class="tarif"><span class="gros">≈9 RMB</span><span class="unite">a month, and up</span></div>
         <div class="tarif-plus">about 0.3 RMB a day · roughly 45 RMB for the semester · free tier to test</div>
-        <div class="desc"><strong>Not on iPhone or Mac.</strong> There is no iOS or macOS version yet, so check it runs on your devices before you count on it. Otherwise a Chinese-market service rather than a Western one: sold by the day or as data packs that do not expire, with a free tier to try, and it takes RMB.</div>
+        <div class="desc"><strong>Not on iPhone or Mac</strong> — no iOS or macOS version yet. Sold by the day, takes RMB, free tier to try.</div>
       </div>
     </div>
   </div>
@@ -1198,16 +1198,13 @@
   <h1 class="chapitre">eSIM, and the<br><span class="rouge">first days online</span></h1>
   <p class="chapo">A travel eSIM bought at home covers the gap between landing and the SIM shop — and it has one useful side effect: it roams onto a foreign network, so Google and WhatsApp work through it with no VPN at all.</p>
 
-  <h2 class="bloc">Two different things, and you want both</h2>
-  <p>An <strong>eSIM from home</strong> — Airalo and the like — is data only. You buy it online in five minutes and it is live the moment the plane doors open. A <strong>Chinese SIM</strong> is a <strong>+86 number</strong>, and that number is what the bank, Alipay, Taobao, the bike apps and your SHU account all check. Neither replaces the other: the eSIM gets you through the first days, the Chinese number runs the rest of the semester (<a href="#sim">the previous chapter</a>).</p>
+  <p>An <strong>eSIM from home</strong> is data only, live the moment the plane doors open. A <strong>Chinese SIM</strong> is a <strong>+86 number</strong> — what the bank, Alipay, Taobao, the bike apps and your SHU account all check. You want both: the eSIM covers the first days, the number runs the semester (<a href="#sim">the previous chapter</a>).</p>
   <ul class="liste">
-    <li><strong>Buy a small one.</strong> A few days of data is all you need — you will have a Chinese SIM inside a week, and it will be far cheaper than any roaming plan.</li>
-    <li><strong>Check at home that your phone takes an eSIM and is not carrier-locked</strong>, while you can still do something about it.</li>
-    <li><strong>Leave the physical slot empty</strong> for the Chinese card. Then you run both at once: local number in the tray, travel data on the eSIM.</li>
-    <li><strong>Keep a little credit on it afterwards.</strong> The day your VPN stops working, a roaming eSIM is still a way onto the open internet — and the day you lose your Chinese number, it is how you tell someone.</li>
+    <li><strong>Buy a small one</strong>, and check at home that your phone takes an eSIM and is not carrier-locked.</li>
+    <li><strong>Leave the physical slot empty</strong> for the Chinese card, and run both at once.</li>
   </ul>
   <h2 class="bloc">Which one to buy</h2>
-  <p>All four route your data out of the mainland, which is what makes Google and WhatsApp work through them with no VPN. Buy the smallest plan that covers your first days — you will have a Chinese SIM inside a week.</p>
+  <p>All four route your data out of the mainland — that is what makes Google and WhatsApp work through them with no VPN.</p>
   <table class="horaires esims">
     <tr><th>Provider</th><th>Plan</th><th>Price</th><th>Worth knowing</th></tr>
     <tr><td class="f"><span class="slot logo filled" data-img="logo-nomad.png"><img src="assets/logo-nomad.png" loading="lazy" decoding="async" width="256" height="256" alt=""></span>Nomad</td><td class="q">5 GB · 30 days</td><td class="p">≈90 RMB<span class="dev">13.50 USD</span></td><td>Runs on both China Unicom and China Telecom, so it holds a signal where the others drop one.</td></tr>
