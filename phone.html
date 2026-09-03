@@ -190,6 +190,10 @@
     font-variant-numeric:tabular-nums;}
   .horaires td.f{font-weight:700;color:var(--rouge-fonce);}
   .horaires td.none{color:#B3ABA4;}
+  .esims td{white-space:normal;vertical-align:top;padding-top:1.2mm;padding-bottom:1.2mm;}
+  .esims td.q,.esims td.p{white-space:nowrap;}
+  .esims td.p{font-weight:700;color:var(--rouge);}
+  .esims td.p .dev{display:block;font-weight:400;font-size:7.6pt;color:var(--encre-douce);}
   .panneau.afec{display:flex;gap:5mm;align-items:center;}
   .panneau.afec .afec-txt{flex:1;min-width:0;}
   .panneau.afec .afec-qr{flex:none;text-align:center;}
@@ -1275,8 +1279,16 @@
 
   <h2 class="bloc">The first hour, in order</h2>
   <p>Land · turn the eSIM on before you leave the terminal · call the Didi (<a href="#arrivee">Chapter&nbsp;II</a>) · message home · then sleep. The SIM shop, the bank and the campus card can all wait for daylight.</p>
-
-  <div class="conseil"><b>Can you get a Chinese eSIM instead?</b> All three operators switched eSIM on at the end of 2025, but as far as we can tell it is for Chinese ID holders, and a foreign passport still gets you a plastic card and a face scan. Ask at the Unicom counter on Jufengyuan Rd and tell <b>Anicet</b> what they say — this page gets corrected the same day. <span class="badge verif">to be confirmed</span></div>
+  <h2 class="bloc">Which one to buy</h2>
+  <p>All four route your data out of the mainland, which is what makes Google and WhatsApp work through them with no VPN. Buy the smallest plan that covers your first days — you will have a Chinese SIM inside a week.</p>
+  <table class="horaires esims">
+    <tr><th>Provider</th><th>Plan</th><th>Price</th><th>Worth knowing</th></tr>
+    <tr><td class="f">Nomad</td><td class="q">5 GB · 30 days</td><td class="p">≈90 RMB<span class="dev">13.50 USD</span></td><td>Runs on both China Unicom and China Telecom, so it holds a signal where the others drop one.</td></tr>
+    <tr><td class="f">Saily</td><td class="q">5 GB · 30 days</td><td class="p">≈100 RMB<span class="dev">14.99 USD</span></td><td>The most consistent of the four at getting round the firewall in testing.</td></tr>
+    <tr><td class="f">Airalo</td><td class="q">5 GB · 30 days</td><td class="p">≈105 RMB<span class="dev">15.50 USD</span></td><td>The best known, and the easiest to buy. China Unicom only. 10&nbsp;GB is about 180&nbsp;RMB.</td></tr>
+    <tr><td class="f">Holafly</td><td class="q">unlimited · 7 days</td><td class="p">≈185 RMB<span class="dev">27.50 USD</span></td><td>Unlimited, but the hotspot is capped near 1&nbsp;GB a day and there are no top-ups.</td></tr>
+  </table>
+  <div class="conseil"><b>Turn data roaming on, and leave it on.</b> It is the one setting everybody switches off abroad out of habit, and on a travel eSIM it is the whole trick: with roaming off the data never leaves China, and the firewall is back. It costs you nothing — the plan is prepaid.</div>
   <div class="pied"><a href="#sommaire">UTSEUS · Baoshan Handbook</a><span class="num">25</span></div>
 </section>
 
