@@ -58,6 +58,7 @@ PHONE_CSS = """
   .lieu.pers .slot.portrait{width:26vw!important;max-width:26vw!important;flex:none;}
   .lieu.app .slot.logo{width:16mm!important;max-width:16mm!important;height:16mm;flex:none;}
   .evite .slot.logo{width:19mm!important;max-width:19mm!important;height:19mm;flex:none;}
+  .esims .slot.logo{width:9mm!important;max-width:9mm!important;height:9mm;flex:none;}
   .slot img{height:auto;object-fit:contain;}
   /* Sur telephone la vignette occupe deja toute la largeur : agrandir ne sert que si
      l'image remplit la hauteur et se fait balayer lateralement. */
